@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reTestXmlDataContainer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" reTestVersion="3.0.0" dataType="de.retest.ui.descriptors.SutState" dataTypeVersion="2">
+	<data xsi:type="sutState">
+		<descriptors retestId="5a6bd408-c598-4c78-b693-513650c8cc51" screenId="1" screen="" title="">
+			<identifyingAttributes>
+				<attributes>
+					<attribute key="outline" xsi:type="outlineAttribute">
+						<x>0</x>
+						<y>0</y>
+						<height>800</height>
+						<width>1200</width>
+					</attribute>
+					<attribute key="path" xsi:type="pathAttribute">HTML[1]</attribute>
+					<attribute key="suffix" xsi:type="suffixAttribute">1</attribute>
+					<attribute key="type" xsi:type="stringAttribute">HTML</attribute>
+				</attributes>
+			</identifyingAttributes>
+			<attributes/>
+			<containedComponents retestId="f86706d1-e0fa-45bb-97c6-e02d516f919c">
+				<identifyingAttributes>
+					<attributes>
+						<attribute key="outline" xsi:type="outlineAttribute">
+							<x>8</x>
+							<y>8</y>
+							<height>784</height>
+							<width>1184</width>
+						</attribute>
+						<attribute key="path" xsi:type="pathAttribute">HTML[1]/BODY[1]</attribute>
+						<attribute key="suffix" xsi:type="suffixAttribute">1</attribute>
+						<attribute key="type" xsi:type="stringAttribute">BODY</attribute>
+					</attributes>
+				</identifyingAttributes>
+				<attributes/>
+			</containedComponents>
+			<containedComponents retestId="f2bbc599-bfb5-4b1a-b257-4cc0a58b31b5">
+				<identifyingAttributes>
+					<attributes>
+						<attribute key="outline" xsi:type="outlineAttribute">
+							<x>0</x>
+							<y>0</y>
+							<height>0</height>
+							<width>0</width>
+						</attribute>
+						<attribute key="path" xsi:type="pathAttribute">HTML[1]/HEAD[1]</attribute>
+						<attribute key="suffix" xsi:type="suffixAttribute">1</attribute>
+						<attribute key="type" xsi:type="stringAttribute">HEAD</attribute>
+					</attributes>
+				</identifyingAttributes>
+				<attributes/>
+			</containedComponents>
+			<screenshot>
+				<persistenceId>window_c81d5f8776afdabd76171541a2219796d8bb4f638a5f447927c1c3d252fda815</persistenceId>
+				<type>PNG</type>
+			</screenshot>
+		</descriptors>
+	</data>
+</reTestXmlDataContainer>
