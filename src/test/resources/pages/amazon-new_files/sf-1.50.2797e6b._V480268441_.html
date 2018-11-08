@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<!-- saved from url=(0100)https://images-eu.ssl-images-amazon.com/images/G/01/ape/sf/desktop/sf-1.50.2797e6b._V480268441_.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <!-- DACX SafeFrame v1.50.2797e6b -- 2018-10-25T18:05:30+0000 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Cache-Control" content="public">
+        <meta name="ROBOTS" content="NOINDEX">
+        <meta name="ROBOTS" content="NOFOLLOW">
+        <meta name="ROBOTS" content="NOARCHIVE">
+        <meta name="ROBOTS" content="NOSNIPPET">
+        <meta name="ROBOTS" content="NOODP ">
+        <title></title>
+        <style type="text/css">
+            body { margin:0px;padding:0px;background-color:transparent; }
+        </style>
+    </head>
+    <body marginwidth="0" marginheight="0">
+        <div id="div-gpt-ad">
+            <script>
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+function replacePlaceholder(clickTracker, htmlContent) {
+    try {
+        var replacement = clickTracker || '',
+            content = htmlContent;
+
+        if (
+            typeof replacement !== 'string'
+            || replacement === '&pd_rd_plhdr=t'
+        ) {
+            replacement = '';
+        }
+
+        // Leave trailing ampersand for safe replacement,
+        // and preserve leading ampersand/question-mark.
+        return content.replace(/(&|\?){1}pd_rd_plhdr=t(&|'|"|\\"|\\'){1}/, '$1' + replacement + '$2');
+    } catch (ex) {
+        return htmlContent;
+    }
+}
+
+module.exports.replacePlaceholder = replacePlaceholder;
+
+},{}],2:[function(require,module,exports){
+/*
+    Create an IAB safeframe API for some limited functionality
+    http://www.iab.net/media/file/SafeFrames_v1.1_final.pdf
+ */
+
+var cachedViewability = null; // This value will be updated by the parent page's sf library code periodically.
+
+var cachedGeom = null; // This value will be updated by the parent page's sf library code periodically.
+
+var $sf = { ext: {} };
+
+$sf.ext.inViewPercentage = function() {
+    // The range of the sf api function
+    // is a whole number in [0, 100]
+    cachedViewability = cachedViewability || 0;
+    return Math.round(100 * cachedViewability);
+};
+
+$sf.ext.geom = function() {
+    cachedGeom = cachedGeom || {};
+    return cachedGeom;
+};
+
+/*
+    Return the object which includes the APIs for external party.
+ */
+module.exports.produce = function() {
+    return $sf;
+};
+
+module.exports.update = function(data) {
+    // update cached viewability for synchronous viewability access
+    cachedViewability = data && data.geom && data.geom.self.iv;
+    if (cachedViewability === null) {
+        // Problem determining viewability remove functions that expose it
+        delete $sf.ext.inViewPercentage;
+    }
+    cachedGeom = data && data.geom;
+    if (cachedGeom === null) {
+        // Problem determining geom remove functions that expose it
+        delete $sf.ext.geom;
+    }
+};
+
+},{}],3:[function(require,module,exports){
+// List of Pre-Defined CSM Counters to be used inside the safeframe.
+var AD_LOAD_COUNTERS = {
+    IFRAME_INIT: 'adload:iframeinitialized',
+    RENDER_START: 'adload:renderstart',
+    RENDER_END: 'adload:renderend',
+    CREATIVE_WRITTEN: 'adload:creativewritten',
+    FIRED_IMP: 'adload:impressionfired',
+    FIRED_UNSERVED_IMP: 'adload:unservedimpressionfired',
+    FIRED_VIEWABILITY: 'adload:viewabilityfired',
+    FIRED_UNSERVED_VIEWABILITY: 'adload:unservedviewabilityfired'
+};
+
+var AD_FETCH_COUNTERS = {
+    REQUEST_START: 'adfetch:request',
+    PUNT_RETURNED: 'adfetch:punt',
+    ERROR_RETURNED: 'adfetch:error',
+    EMPTY_RESPONSE: 'adfetch:noad',
+    RENDERED_AD: 'adfetch:renderad',
+    RENDER_ERROR: 'adfetch:rendererror',
+    HTTP_ERROR: 'adfetch:httperror',
+    EXCEPTION: 'adfetch:exception'
+};
+
+module.exports.AD_LOAD_COUNTERS = AD_LOAD_COUNTERS;
+module.exports.AD_FETCH_COUNTERS = AD_FETCH_COUNTERS;
+
+},{}],4:[function(require,module,exports){
+/*
+ * Define a message handler which build a communication machanism for safeFrame window
+ * to send and receive message from safeFrame window.
+ * This module includes all the common functionality shared by desktop and mobile.
+ */
+
+/*
+ * Use for cases where safeframe is not supported and
+ * error message could not possibly propagate to parent
+ * window for proper RTLA logging.
+ */
+
+function localErrorLog(msg, ex) {
+    /* eslint-disable no-console */
+    if (typeof console !== 'undefined' && console.error) {
+        console.error(msg, ex);
+    }
+    /* eslint-disable no-console */
+}
+
+/*
+ * Helper function to check whether a given url is served over http or https
+ */
+function isSecure(url) {
+    return /^https/.test(url);
+}
+
+function replaceWithSecure(url) {
+    return (!url) ? url : url.replace(/^http:/, 'https:');
+}
+
+function isOnAmazon(text) {
+    return /\.amazon\.(com?\.)?[a-z]{2,4}(:.*)?$/i.test(text);
+}
+
+/*
+ * This is a class which is responsle for sending and receiving messag from the parent window.
+ */
+function Messenger(client, options, msgListeners) {
+    var self = this;
+
+    var counters = require('./sfCounters');
+    var AD_LOAD_COUNTERS = counters.AD_LOAD_COUNTERS;
+
+    // Viewability flags
+    var viewedPixels = {};
+
+    this.client = client || {};
+    this.options = options || {};
+    this.msgListeners = msgListeners || {};
+
+    // Produces API objects from a map of apiDefinitions
+    this.produceClientAPIs = function(apiDefinitions) {
+        function API(apiFunction, apiName, logInvocation, errorHandler) {
+            return function() {
+                try {
+                    if (logInvocation) {
+                        self.sendMessage('logAPIInvocation', {apiName: apiName, apiParams: arguments});
+                    }
+                    return apiFunction.apply(this, arguments);
+                } catch (e) {
+                    if (typeof errorHandler === 'function') {
+                        errorHandler('API Call Failed', e);
+                    }
+                    return null;
+                }
+            };
+        }
+
+        // recursive function to generate APIs, some of which are nested (e.g. Mash APIs).
+        function generateAPIs(apiMap, parentName) {
+            var generatedAPIs = {};
+            for (var apiName in apiMap) {
+                if (!apiMap.hasOwnProperty(apiName)) {
+                    continue;
+                } // avoids looping through prototype keys
+
+                var apiObj = apiMap[apiName];
+                var fullName = parentName ? parentName + '.' + apiName : apiName;
+                if (typeof apiObj === 'function') {
+                    generatedAPIs[apiName] = new API(apiObj, fullName);
+                } else if (apiObj.hasOwnProperty('apiFunc')) {
+                    generatedAPIs[apiName] = new API(apiObj.apiFunc, fullName, apiObj.logInvocation);
+                } else if (typeof apiObj === 'object') {
+                    generatedAPIs[apiName] = generateAPIs(apiObj, fullName);
+                }
+            }
+            return generatedAPIs;
+        }
+
+        self.client = generateAPIs(apiDefinitions, '');
+    };
+    this.sendMessage = function(command, data) {
+        if (self.options === {}) {
+            return;
+        }
+        var msg = {
+            command: command,
+            arid: self.options.arid,
+            data: data || {}
+        };
+
+        try {
+            parent.postMessage(JSON.stringify(msg), self.options.hostDomain);
+        } catch (ex) {
+            localErrorLog('Post Message unsupported ', ex);
+        }
+    };
+    this.receiveMessage = function(msgObj) {
+        if (self.options === {} || self.client === {}) {
+            return;
+        }
+        var msg;
+        try {
+            // Verify message
+            msg = JSON.parse(msgObj.data);
+            if (msgObj.origin !== self.options.hostDomain || typeof msg.data !== 'object') {
+                throw 'Invalid Message';
+            }
+        } catch (ex) {
+            /* Ignore invalid messages */
+            var errorMessage = 'Received Error: ' + msgObj.data;
+            self.client.logError(errorMessage, ex);
+            return;
+        }
+
+        try {
+            /* eslint-disable no-console */
+            if (self.options.debug && typeof console !== 'undefined') {
+                console.log('SF Message received ', msgObj);
+            }
+            /* eslint-disable no-console */
+
+            // msgObj is expected to have a command
+            var cmdPath = msg.command ? msg.command.split('.') : [];
+            var action = self.client[cmdPath[0]];
+            for (var i = 1; i < cmdPath.length; i++) {
+                if (action) {
+                    action = action[cmdPath[i]];
+                } else {
+                    break;
+                }
+            }
+            if (msg.command === 'customMessage') {
+                // treat custom message specially
+                var msgKey = msg.data.key;
+                var body = msg.data.data;
+                if (typeof self.msgListeners[msgKey] === 'function') {
+                    try {
+                        self.msgListeners[msgKey](body);
+                    } catch (ex) {
+                        self.client.logError('Custom Message Listener Error', ex);
+                    }
+                }
+            } else if (action) {
+                action(msg.data);
+            }
+        } catch (ex) {
+            //Log the error metrics for debugging purposes.
+            self.client.logError('Error with ' + JSON.parse(msgObj.data).command, ex);
+            return;
+        }
+    };
+    var createPixel = function(src, id, appendChildElement, pixelOnLoadHandler, pixelOnErrorHandler) {
+        var existingPixel = document.getElementById(id);
+        if (existingPixel === null && typeof src === 'string' && src.length > 0) {
+            var pixel = document.createElement('img');
+            pixel.id = id;
+            pixel.src = src;
+            pixel.style.display = 'none';
+            pixel.onload = pixelOnLoadHandler;
+            pixel.onerror = pixelOnErrorHandler;
+            appendChildElement.appendChild(pixel);
+        }
+    };
+
+    /*
+     * Helper function for firing no inventory pixel.
+     */
+    this.fireNoInventoryPixel = function(aaxInstrPixelUrl) {
+        var fireNoInventoryPixelTrace = {};
+        if (self.options === {} || self.client === {}) {
+            return;
+        }
+        try {
+            if (typeof aaxInstrPixelUrl === 'string' && aaxInstrPixelUrl.length > 0) {
+                var noInventoryInfo = {
+                    ni: true
+                };
+                fireNoInventoryPixelTrace.noInventoryInfo = noInventoryInfo;
+                var aaxNoInventoryPixelUrl = aaxInstrPixelUrl + 'nii/' + JSON.stringify(noInventoryInfo);
+                fireNoInventoryPixelTrace.aaxNoInventoryPixelUrl = aaxNoInventoryPixelUrl;
+                createPixel(aaxNoInventoryPixelUrl, 'ape_noInventoryPixel', document.getElementsByTagName('body')[0],
+                    function() {
+                        self.sendMessage('updateNoInventoryImpressionFired', {isNoInventoryImpFired: true});
+                        fireNoInventoryPixelTrace.successfullyFiredNoInventoryImp = true;
+                    },
+                    function() {
+                        self.sendMessage('updateNoInventoryImpressionFired', {isNoInventoryImpFired: false});
+                        fireNoInventoryPixelTrace.successfullyFiredNoInventoryImp = false;
+                    }
+                );
+                self.client.countMetric(AD_LOAD_COUNTERS.FIRED_UNSERVED_IMP, 1);
+                self.client.sendAdBarTrace('pixels', {fireNoInventoryPixel: fireNoInventoryPixelTrace});
+            }
+        } catch (ex) {
+            self.client.logError('Error firing pixels: ' + self.options.aaxNoInventoryPixelUrl, ex);
+        }
+    };
+    /*
+     * Helper function for firing ad pixels defined in the options.
+     */
+    this.fireAdPixels = function() {
+        if (self.options === {} || self.client === {}) {
+            return;
+        }
+        try {
+            // We expect adPixels to be an array of URLs
+            if (typeof self.options.adPixels !== 'object') {
+                return;
+            } else {
+                var pixel;
+                var pixelsArray = self.options.adPixels;
+                if (typeof self.options.aaxImpPixelUrl === 'string' && self.options.aaxImpPixelUrl.length > 0) {
+                    createPixel(self.options.aaxImpPixelUrl, 'ape_impression', document.getElementsByTagName('body')[0],
+                        function() {
+                            self.sendMessage('updateAdImpressionsFired', {isImpFired: true});
+                            self.client.sendAdBarTrace('pixels', {impressions: {isImpFired: true, pixelURL: self.options.aaxImpPixelUrl}});
+                        },
+                        function() {
+                            self.sendMessage('updateAdImpressionsFired', {isImpFired: false});
+                        }
+                    );
+                    self.client.countMetric(AD_LOAD_COUNTERS.FIRED_IMP, 1);
+                }
+
+                for (var index = 0, length = pixelsArray.length; index < length; index++) {
+                    pixel = new Image();
+                    pixel.src = pixelsArray[index];
+                }
+            }
+        } catch (ex) {
+            self.client.logError('Error firing pixels: ' + JSON.stringify(pixelsArray), ex);
+        }
+    };
+
+    this.fireViewablePixels = function(cachedViewability, viewableInfo, viewabilityStandards) {
+        if (self.options === {} || client === {} || !self.options.aaxInstrPixelUrl || !viewabilityStandards) {
+            return;
+        }
+        var fireViewablePixel = function(v) {
+            var viewablePixelTrace = {};
+            viewableInfo.v = v;
+            viewableInfo.ptv = typeof self.options.aPageStart !== 'undefined' ? (Date.now() - self.options.aPageStart) / 1000 : 0;
+            viewableInfo.ttv = typeof self.options.adStartTime !== 'undefined' ? (Date.now() - self.options.adStartTime) / 1000 : 0;
+            createPixel(self.options.aaxInstrPixelUrl + 'v/' + JSON.stringify(viewableInfo), v && v.def ? 'ape_' + v.def + '_viewability' : '', document.getElementsByTagName('body')[0],
+                function() {
+                    self.sendMessage('updateAdViewabilityFired', {isViewed: true});
+                },
+                function() {
+                    self.sendMessage('updateAdViewabilityFired', {isViewed: false});
+                }
+            );
+            viewablePixelTrace.viewableInfo = viewableInfo;
+            viewablePixelTrace.aaxInstrPixelUrl = self.options.aaxInstrPixelUrl;
+            viewablePixelTrace.viewablePercentage = cachedViewability;
+            self.client.countMetric(AD_LOAD_COUNTERS.FIRED_VIEWABILITY + '_' + v.def, 1);
+            self.client.sendAdBarTrace('pixels', {fireViewablePixels: viewablePixelTrace});
+        };
+        // Helper method to check if ad is viewable or not and handle the edge case when p equals 0
+        var isViewable = function(viewablePercentage, p) {
+            return viewablePercentage && (100 * viewablePercentage >= p && p !== 0 || 100 * viewablePercentage > p && p === 0);
+        };
+        var measureViewability = function(viewabilityStandard) {
+            var p = viewabilityStandard.p;
+            var t = viewabilityStandard.t;
+            var def = viewabilityStandard.def;
+            if (!viewedPixels[def].viewed && isViewable(cachedViewability, p)) {
+                if (!viewedPixels[def].timeout) {
+                    viewedPixels[def].timeout = setTimeout(function() {
+                        viewedPixels[def].viewed = true;
+                        fireViewablePixel(viewabilityStandard);
+                    }, 1000 * t);
+                }
+            } else if (viewedPixels[def].timeout) {
+                clearTimeout(viewedPixels[def].timeout);
+                viewedPixels[def].timeout = null;
+            }
+        };
+
+        for (var i = 0; i < viewabilityStandards.length; i++) {
+            var def = viewabilityStandards[i].def;
+            if (def) {
+                viewedPixels[def] = viewedPixels[def] || {};
+                viewedPixels[def].viewed = typeof viewedPixels[def].viewed === 'undefined' ? false : viewedPixels[def].viewed;
+                viewedPixels[def].timeout = typeof viewedPixels[def].timeout === 'undefined' ? null : viewedPixels[def].timeout;
+            }
+        }
+
+        // Fire pixels following this standard: https://w.amazon.com/index.php/A9/AAX/Specifications/AAXLogFormatV2_0#Pixel_View_Payload_Log
+        for (i = 0; i < viewabilityStandards.length; i++) {
+            measureViewability(viewabilityStandards[i]);
+        }
+    };
+
+    this.fireNoInventoryViewabilityPixels = function(cachedViewability, noInventoryViewableInfo, viewabilityStandards) {
+        if (self.options === {} || client === {} || !self.options.aaxInstrPixelUrl || !viewabilityStandards) {
+            return;
+        }
+        var fireNoInventoryViewablePixel = function(v) {
+            var noInventoryViewablePixelTrace = {};
+            noInventoryViewableInfo.niv = true;
+            noInventoryViewableInfo.v = v;
+            noInventoryViewableInfo.ptv = typeof self.options.aPageStart !== 'undefined' ? (Date.now() - self.options.aPageStart) / 1000 : 0;
+            noInventoryViewableInfo.ttv = typeof self.options.adStartTime !== 'undefined' ? (Date.now() - self.options.adStartTime) / 1000 : 0;
+            createPixel(self.options.aaxInstrPixelUrl + 'niv/' + JSON.stringify(noInventoryViewableInfo), v && v.def ? 'ape_' + v.def + '_viewability_noInventory' : '', document.getElementsByTagName('body')[0],
+                function() {
+                    self.sendMessage('updateNoInventoryViewabilityFired', {isViewed: true});
+                },
+                function() {
+                    self.sendMessage('updateNoInventoryViewabilityFired', {isViewed: false});
+                }
+            );
+            noInventoryViewablePixelTrace.noInventoryViewableInfo = noInventoryViewableInfo;
+            noInventoryViewablePixelTrace.aaxInstrPixelUrl = self.options.aaxInstrPixelUrl;
+            noInventoryViewablePixelTrace.viewablePercentage = cachedViewability;
+            self.client.countMetric(AD_LOAD_COUNTERS.FIRED_UNSERVED_VIEWABILITY + '_' + v.def, 1);
+            self.client.sendAdBarTrace('pixels', {fireNoInventoryViewablePixels: noInventoryViewablePixelTrace});
+        };
+        // Helper method to check if ad is viewable or not and handle the edge case when p equals 0
+        var isViewable = function(viewablePercentage, p) {
+            return viewablePercentage && (100 * viewablePercentage >= p && p !== 0 || 100 * viewablePercentage > p && p === 0);
+        };
+        var measureViewability = function(viewabilityStandard) {
+            var p = viewabilityStandard.p;
+            var t = viewabilityStandard.t;
+            var def = viewabilityStandard.def;
+            if (!viewedPixels[def].viewed && isViewable(cachedViewability, p)) {
+                if (!viewedPixels[def].timeout) {
+                    viewedPixels[def].timeout = setTimeout(function() {
+                        viewedPixels[def].viewed = true;
+                        fireNoInventoryViewablePixel(viewabilityStandard);
+                    }, 1000 * t);
+                }
+            } else if (viewedPixels[def].timeout) {
+                clearTimeout(viewedPixels[def].timeout);
+                viewedPixels[def].timeout = null;
+            }
+        };
+
+        for (var i = 0; i < viewabilityStandards.length; i++) {
+            var def = viewabilityStandards[i].def;
+            if (def) {
+                viewedPixels[def] = viewedPixels[def] || {};
+                viewedPixels[def].viewed = typeof viewedPixels[def].viewed === 'undefined' ? false : viewedPixels[def].viewed;
+                viewedPixels[def].timeout = typeof viewedPixels[def].timeout === 'undefined' ? null : viewedPixels[def].timeout;
+            }
+        }
+
+        // Fire pixels following this standard: https://w.amazon.com/index.php/A9/AAX/Specifications/AAXLogFormatV2_0#Pixel_View_Payload_Log
+        for (i = 0; i < viewabilityStandards.length; i++) {
+            measureViewability(viewabilityStandards[i]);
+        }
+    };
+
+    this.handleNoAdContent = function() {
+        self.fireNoInventoryPixel(self.options.aaxInstrPixelUrl);
+        self.sendMessage('enableNoInventoryViewabilityTrackerAndInvokeFallback');
+    };
+
+    var writeJSONP = function(url, callbackFunc, callbackName, errorHandler, errorHandlerName, nativeDocumentWrite) {
+        window[callbackName] = callbackFunc;
+        window[errorHandlerName] = errorHandler;
+
+        // html parse has errors if tags aren't separated strings
+        nativeDocumentWrite(['<scr', 'ipt type=\'text/javascript\', src=\'', url, '\', onerror=\'', errorHandlerName + '()', '\'></scr', 'ipt>'].join(''));
+    };
+
+    // creates an XSP getAd request using JSONP.
+    this.createXspRequest = function(adSource, data, puntFallback, nativeDocumentWrite, writeAdFunc) {
+        var AD_FETCH_COUNTERS = counters.AD_FETCH_COUNTERS;
+        var addCsmTag = self.client.addCsmTag;
+        var errorFallback = self.client.handleFallbackBehavior;
+        var sendCsmCounter = self.client.countMetric;
+        var logError = self.client.logError;
+        var sendAdBarTrace = self.client.sendAdBarTrace;
+
+        var renderAdCallback = function(adContent) {
+            var callbackTrace = {};
+            callbackTrace.callBackReceived = true;
+            callbackTrace.errFallback = errorFallback.name;
+            if (adContent && Object.keys(adContent).length !== 0) {
+                callbackTrace.adContent = adContent;
+                callbackTrace.status = adContent.status;
+                var status = adContent.status;
+                switch (status) {
+                    case 'punt':
+                        addCsmTag('aaxPunt');
+                        sendCsmCounter(AD_FETCH_COUNTERS.PUNT_RETURNED, 1);
+                        data.aaxInstrPixelUrl = adContent.instrPixelURL;
+                        puntFallback();
+                        callbackTrace.aaxReturnedPunt = true;
+                        sendAdBarTrace('aaxCall', callbackTrace);
+                        break;
+                    case 'error':
+                        sendCsmCounter(AD_FETCH_COUNTERS.ERROR_RETURNED, 1);
+                        errorFallback();
+                        callbackTrace.aaxReturnedError = true;
+                        sendAdBarTrace('aaxCall', callbackTrace);
+                        break;
+                    default:
+                        try {
+                            data.aaxImpPixelUrl = adContent.impPixelURL;
+                            data.aaxInstrPixelUrl = adContent.instrPixelURL;
+                            data.htmlContent = adContent.creative;
+                            if (data && data.adFeedbackInfo) {
+                                data.adFeedbackInfo.adProgramId = adContent.programId;
+                            }
+                            if (data && data.adCreativeMetaData) {
+                                data.adCreativeMetaData.adProgramId = adContent.programId;
+                                data.adCreativeMetaData.adImpressionId = adContent.impPixelURL;
+                                data.adCreativeMetaData.adCreativeId = adContent.creativeId;
+                                data.adCreativeMetaData.adId = adContent.adId;
+                                addCsmTag('adRender');
+                                addCsmTag('adRender', 'creativeId:' + data.adCreativeMetaData.adCreativeId);
+                                addCsmTag('adRender', 'programId:' + data.adCreativeMetaData.adProgramId);
+                            }
+                            callbackTrace.aaxReturnedContent = true;
+                            sendAdBarTrace('aaxCall', callbackTrace);
+                            writeAdFunc(data.htmlContent);
+                            sendCsmCounter(AD_FETCH_COUNTERS.RENDERED_AD, 1);
+                        } catch (e) {
+                            errorFallback();
+                            sendCsmCounter(AD_FETCH_COUNTERS.RENDER_ERROR, 1);
+                            callbackTrace.error = 'renderError';
+                            sendAdBarTrace('aaxCall', callbackTrace);
+                        }
+                }
+            } else {
+                sendCsmCounter(AD_FETCH_COUNTERS.EMPTY_RESPONSE, 1);
+                errorFallback();
+                callbackTrace.error = 'emptyAAXResponse';
+                sendAdBarTrace('aaxCall', callbackTrace);
+            }
+        };
+        var fetchErrorHandler = function() {
+            sendCsmCounter(AD_FETCH_COUNTERS.HTTP_ERROR, 1);
+            logError('Failed to Fetch Ad From AAX.');
+            sendAdBarTrace('aaxCall', { error: 'httpError'});
+            errorFallback();
+        };
+        var exceptionHandler = function() {
+            sendCsmCounter(AD_FETCH_COUNTERS.EXCEPTION, 1);
+            logError('Failed to create JSONP call.');
+            sendAdBarTrace('aaxCall', { error: 'failedToCreateJSONP'});
+            errorFallback();
+        };
+        var constructJsonpUrl = function(sourceUrl, callbackName) {
+            // modify the XSP URL per issues.amazon.com/issues/AAX-2877
+            var jsonpUrl = sourceUrl.replace(/getAd/, 'getAdj');
+            if (jsonpUrl.indexOf('?') === -1) {
+                return jsonpUrl + '?callback=' + callbackName;
+            } else {
+                return jsonpUrl + '&callback=' + callbackName;
+            }
+        };
+
+        sendCsmCounter(AD_FETCH_COUNTERS.REQUEST_START, 1);
+        try {
+            var callbackName = 'aax_xsp_render_ad';
+            var errorHandlerName = 'fetch_error_handler';
+
+            var jsonpUrl = constructJsonpUrl(adSource, callbackName);
+            sendAdBarTrace('aaxCall', {jsonpUrl: jsonpUrl, XSPCallSetupComplete: true});
+            writeJSONP(jsonpUrl, renderAdCallback, callbackName, fetchErrorHandler, errorHandlerName, nativeDocumentWrite);
+        } catch (ex) {
+            exceptionHandler(ex);
+            sendAdBarTrace('aaxCall', {JSONPCreationException: {exception: ex} });
+        }
+    };
+
+    // creates a X/GetAd Requests using JSONP
+    // Uses native document.write for JSONP, and writeAdFunc to write the returned ad creative
+    this.createXGetAdRequest = function(adSource, fallbackFunc, nativeDocumentWrite, writeAdFunc) {
+        /**
+         * Expose function for rendering CornerStone Ads.
+         * The AAX getAd expects this function to exist
+         * on the window.
+         * @param {object} response The response object from AAX getad call.
+         */
+        var aaxRenderFunc = function(response) {
+            if (!response || typeof response.html === 'undefined' || !response.html) {
+                fallbackFunc();
+            } else {
+                writeAdFunc(response.html);
+            }
+        };
+        writeJSONP(adSource, aaxRenderFunc, 'aax_render_ad', fallbackFunc, 'fallback', nativeDocumentWrite);
+    };
+}
+
+module.exports.messenger = new Messenger();
+module.exports.localErrorLog = localErrorLog;
+module.exports.isSecure = isSecure;
+module.exports.replaceWithSecure = replaceWithSecure;
+module.exports.isOnAmazon = isOnAmazon;
+
+},{"./sfCounters":3}],5:[function(require,module,exports){
+/*
+    @license
+    Underscore.js 1.8.3
+    http://underscorejs.org
+    (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+    Underscore may be freely distributed under the MIT license.
+*/
+
+/*
+    Debounce method from underscore: http://underscorejs.org/docs/underscore.html#section-82
+    Returns a function, that, as long as it continues to be invoked, will
+    not be triggered. The function will be called after it stops being called
+    for N milliseconds. If immediate is passed, trigger the function on the
+    leading edge, instead of the trailing.
+*/
+/* eslint-disable */
+module.exports.debounce = function(func, wait, immediate) {
+    var timeout, args, context, timestamp, result;
+
+    var later = function() {
+        var last = now() - timestamp;
+
+        if (last < wait && last >= 0) {
+            timeout = setTimeout(later, wait - last);
+        } else {
+            timeout = null;
+            if (!immediate) {
+                result = func.apply(context, args);
+                if (!timeout) {
+                    context = args = null;
+                }
+            }
+        }
+    };
+
+    return function() {
+        context = this;
+        args = arguments;
+        timestamp = now();
+        var callNow = immediate && !timeout;
+        if (!timeout) {
+            timeout = setTimeout(later, wait);
+        }
+
+        if (callNow) {
+            result = func.apply(context, args);
+            context = args = null;
+        }
+        return result;
+    };
+};
+
+/*
+    Throttle method from underscore: http://underscorejs.org/docs/underscore.html
+    Returns a function, that, when invoked, will only be triggered at most
+    once during a given window of time. Normally, the throttled function
+    will run as much as it can, without ever going more than once per wait
+    duration; but if you’d like to disable the execution on the leading
+    edge, pass {leading: false}. To disable execution on the trailing
+    edge, ditto.
+
+*/
+module.exports.throttle = function(func, wait, options) {
+    var context, args, result;
+    var timeout = null;
+    var previous = 0;
+    if (!options) options = {};
+    var later = function() {
+        previous = options.leading === false ? 0 : now();
+        timeout = null;
+        result = func.apply(context, args);
+        if (!timeout) context = args = null;
+    };
+    return function() {
+        var current = now();
+        if (!previous && options.leading === false) previous = current;
+        var remaining = wait - (current - previous);
+        context = this;
+        args = arguments;
+        if (remaining <= 0 || remaining > wait) {
+            if (timeout) {
+                clearTimeout(timeout);
+                timeout = null;
+            }
+            previous = current;
+            result = func.apply(context, args);
+            if (!timeout) context = args = null;
+        } else if (!timeout && options.trailing !== false) {
+            timeout = setTimeout(later, remaining);
+        }
+        return result;
+    };
+};
+
+// Helper method taken for underscore methods
+//  purposely different than the underscore implementation
+//  since Date is undefined in IE9/10 until the dom loads
+var now = function() {
+    return (Date.now ? Date.now() : new Date().getTime());
+};
+/* eslint-disable */
+
+// Helper for cross browser add listener
+module.exports.addListener = function(elem, event, listener) {
+    if (elem.addEventListener) {
+        elem.addEventListener(event, listener, false);
+    } else if (window.attachEvent) {
+        // Older IE
+        elem.attachEvent('on' + event, listener);
+    }
+};
+
+// Helper for cross browser window attach listener
+module.exports.addWindowListener = function(event, listener) {
+    module.exports.addListener(window, event, listener);
+};
+
+// Helper for cross browser window detach listener
+module.exports.removeWindowListener = function(event, listener) {
+    if (window.removeEventListener) {
+        window.removeEventListener(event, listener, false);
+    } else if (window.detachEvent) {
+        // Older IE
+        window.detachEvent('on' + event, listener);
+    }
+};
+
+module.exports.ensureMessageListener = function(receiveMessage) {
+    module.exports.removeWindowListener('message', receiveMessage);
+    module.exports.addWindowListener('message', receiveMessage);
+};
+
+/*
+ * A function to UTF-8 decode a string. This is used by the decodeBase64 function.
+ * This is a modified version of the source found at: http://www.webtoolkit.info/javascript-base64.html
+ */
+function utf8Decode(utftext) {
+    var string = '';
+    var i = 0;
+    var c = 0, c1 = 0, c2 = 0;
+
+    while (i < utftext.length) {
+        c = utftext.charCodeAt(i);
+
+        if (c < 128) {
+            string += String.fromCharCode(c);
+            i++;
+        } else if ((c > 191) && (c < 224)) {
+            c1 = utftext.charCodeAt(i + 1);
+            string += String.fromCharCode(((c & 31) << 6) | (c1 & 63));
+            i += 2;
+        } else {
+            c1 = utftext.charCodeAt(i + 1);
+            c2 = utftext.charCodeAt(i + 2);
+            string += String.fromCharCode(((c & 15) << 12) | ((c1 & 63) << 6) | (c2 & 63));
+            i += 3;
+        }
+    }
+
+    return string;
+}
+
+/*
+ * A function to decode a base 64 string.
+ * This is a modified version of the source found at: http://www.webtoolkit.info/javascript-base64.html
+ */
+function decodeBase64(input) {
+    var keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+    var output = '';
+    var chr1, chr2, chr3;
+    var enc1, enc2, enc3, enc4;
+    var i = 0;
+
+    input = input.replace(/[^A-Za-z0-9\+\/\=]/g, '');
+
+    while (i < input.length) {
+        enc1 = keyStr.indexOf(input.charAt(i++));
+        enc2 = keyStr.indexOf(input.charAt(i++));
+        enc3 = keyStr.indexOf(input.charAt(i++));
+        enc4 = keyStr.indexOf(input.charAt(i++));
+
+        chr1 = (enc1 << 2) | (enc2 >> 4);
+        chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+        chr3 = ((enc3 & 3) << 6) | enc4;
+
+        output = output + String.fromCharCode(chr1);
+
+        if (enc3 != 64) {
+            output = output + String.fromCharCode(chr2);
+        }
+
+        if (enc4 != 64) {
+            output = output + String.fromCharCode(chr3);
+        }
+    }
+
+    output = utf8Decode(output);
+    return output;
+}
+
+module.exports.decodeBase64 = decodeBase64;
+
+module.exports.createScript = function(src, type, id, onerrorHandler, onloadHandler) {
+    if (document.getElementById(id)) {
+        return;
+    }
+    var element = document.createElement('script');
+    element.async = true;
+    element.setAttribute('crossorigin', 'anonymous');
+    element.src = src;
+    element.type = type;
+    element.id = id;
+    element.onerror = onerrorHandler;
+    element.onload = onloadHandler;
+    return element;
+};
+
+function isAUIAvailable() {
+    //Detecting AUI in JavaScript: https://aui.amazon.com/development/js_framework/detecting_aui
+    return window.P && window.P.AUI_BUILD_DATE;
+}
+
+module.exports.isAUIAvailable = isAUIAvailable;
+
+module.exports.safeFunctionWrapper = function(handler, errorHandler, errorMessage) {
+    return (isAUIAvailable() && typeof window.P.guardError === 'function') ?
+    P.guardError('APE-SafeFrame', handler) :
+    function() {
+        try {
+            handler.apply(this, arguments);
+        } catch (e) {
+            if (typeof errorHandler === 'function' && errorMessage) {
+                errorHandler(errorMessage, e);
+            }
+        }
+    };
+};
+
+
+module.exports.getCookie = function getCookie(cookieName) {
+    var name = cookieName + "=";
+    try {
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var cookieList = decodedCookie.split(';');
+        for (var i = 0; i < cookieList.length; i++) {
+            var cookie = cookieList[i];
+            while (cookie.charAt(0) == ' ') {
+                cookie = cookie.substring(1);
+            }
+            if (cookie.indexOf(name) == 0) {
+                return cookie.substring(name.length, cookie.length);
+            }
+        }
+    } catch(e) {
+        // decodeURIcomponent not supported
+    }
+    return "";
+};
+
+},{}],6:[function(require,module,exports){
+/**
+ * Copyright (c) 2014, Amazon.com
+ * All rights reserved.
+ *
+ * @fileOverview SafeFrame support library to run inside safeframe
+ * @author marsicoa
+ */
+
+/* global require */
+
+/**
+ * SFClient
+ *
+ * The object accessible to ad code that interacts
+ * with the parent window through postMessage.
+ */
+window.SFClient = (function(window, document) {
+    var counters = require('./components/sfCounters');
+    var util = require('./components/util');
+    var sfAPI = require('./components/sfAPI');
+    var sfMsgHandler = require('./components/sfMsgHandler'); // The handler includes all the functionality shared by desktop and mobile
+    var clickTracking = require('./components/clickTracking');
+    var messenger = sfMsgHandler.messenger; // The messenger is a Singleton which is responsible for communicating with the parent window.
+    var localErrorLog = sfMsgHandler.localErrorLog;
+    var isSecure = sfMsgHandler.isSecure;
+    var replaceWithSecure = sfMsgHandler.replaceWithSecure;
+    var isOnAmazon = sfMsgHandler.isOnAmazon;
+    var fireAdPixels = messenger.fireAdPixels;
+    var handleNoAdContent = messenger.handleNoAdContent;
+    var decodeBase64 = util.decodeBase64;
+    var createXspRequest = messenger.createXspRequest;
+    var createXGetAdRequest = messenger.createXGetAdRequest;
+
+    var AD_LOAD_COUNTERS = counters.AD_LOAD_COUNTERS;
+
+    var $sf = window.$sf = sfAPI.produce();
+
+    // Defines sets of apis for use within the iframe
+    var apiDefinitions = {
+        sendAdBarTrace: function(field, traceInfo) {
+            messenger.sendMessage('sendAdBarTrace', {field: field, traceInfo: traceInfo});
+        },
+        changeSize: function(width, height) {
+            messenger.sendMessage('changeSize', {width: width, height: height});
+        },
+        collapseSlot: function() {
+            messenger.sendMessage('collapseSlot');
+        },
+        handleFallbackBehavior: function() {
+            (messenger.client.forceFallback || messenger.client.collapseSlot)();
+        },
+        embedScript: {
+            apiFunc: function(url, charset) {
+                messenger.sendMessage('embedScript', {src: url, charset: charset});
+            },
+            logInvocation: true
+        },
+        logError: function(message, errorObject, level) {
+            messenger.sendMessage('logError', {message: message, error: errorObject});
+        },
+        sendMetrics: function(metric, msg) {
+            messenger.sendMessage('sendMetrics', {metric: metric, metricMsg: msg});
+        },
+        countMetric: function(msg, num, isGlobal) {
+            messenger.sendMessage('countMetric', {metricMsg: msg, value: num, isGlobal: isGlobal});
+        },
+        addCsmTag: function(tag, msg) {
+            messenger.sendMessage('addCsmTag', {tag: tag, msg: msg});
+        },
+        fireViewableLatencyMetrics: function() {
+            messenger.sendMessage('fireViewableLatencyMetrics', {});
+        },
+        customMessage: function(msgKey, messageBody) {
+            messenger.sendMessage('customMessage', {key: msgKey, body: messageBody});
+        },
+        isSupported: function() {
+            return typeof parent.postMessage === 'function';
+        },
+        getARID: function() {
+            return messenger.options.arid;
+        },
+        isOnAmazon: function() {
+            // Lenient REGEX to capture all Amazon locales
+            return isOnAmazon(messenger.options.hostDomain);
+        },
+        // TODO: Future work lock this down with shared secret, used for product detecting ads
+        getPageId: function() {
+            var aanParams = messenger.client.getAanParams();
+            var match = aanParams.match(/\bpid=([^;]+)\b/);
+            return match ? match[1] : null;
+        },
+        // Method to expose debug information to BAdLog
+        getDebugInfo: function(data) {
+            var aanResponse = getAanResponse();
+            var adInfo = {
+                arid: messenger.options.arid,
+                slot: messenger.options.slot,
+                slotName: messenger.options.slotName,
+                shazamId: aanResponse.shazamId,
+                creativeId: aanResponse.creativeId || aanResponse.cid,
+                adId: aanResponse.adId || aanResponse.aid,
+                src: messenger.options.src,
+                iframeHtml: document.body.innerHTML || ''
+            };
+            messenger.client.customMessage(data.key, adInfo);
+        },
+        getAanParams: function() {
+            return messenger.options.aanParams || '';
+        },
+        sendAdInfo: function(adInfo) {
+            if (adInfo && messenger.options.adCreativeMetaData) {
+                messenger.options.adCreativeMetaData.adCreativeDetails = adInfo;
+            }
+        },
+        registerCustomMessageListener: function(msgKey, callback) {
+            messenger.msgListeners[msgKey] = callback;
+        },
+        // Helper method for fetching parameters from the url. Main use case is supporting variation overrides in dynamic ads
+        getQueryParam: function(param) {
+            var paramValue = '';
+            if (typeof messenger.options.queryParams !== 'undefined' && typeof param === 'string') {
+                // Provide support for both sf- and non sf- prefixed param requests
+                if (param.indexOf('sf-') !== 0) {
+                    paramValue = 'sf-' + param;
+                }
+                paramValue = messenger.options.queryParams[paramValue] || '';
+            }
+            return paramValue;
+        },
+        getPlacementInfo: function() {
+            var placementInfo = {};
+            placementInfo.slot = messenger.options.slot;
+            placementInfo.slotName = messenger.options.slotName;
+            return placementInfo;
+        },
+        notifyWhenViewable: function() {
+            messenger.client.countMetric('notifywhenviewable', 1, true);
+            messenger.sendMessage('notifyWhenViewable');
+        },
+        updateViewability: function(data) {
+            // update cached viewability for synchronous
+            //  viewability access
+            sfAPI.update(data);
+            if (!messenger.options.aaxInstrPixelUrl) {
+                return;
+            }
+            var geom = $sf.ext.geom();
+            messenger.fireViewablePixels(geom && geom.self && geom.self.iv, data.payload, data.viewabilityStandards);
+        },
+        updateNoInventoryViewability: function(data) {
+            // update cached viewability for synchronous
+            //  viewability access
+            sfAPI.update(data);
+            if (!messenger.options.aaxInstrPixelUrl) {
+                return;
+            }
+            var geom = $sf.ext.geom();
+            messenger.fireNoInventoryViewabilityPixels(geom && geom.self && geom.self.iv, data.payload, data.viewabilityStandards);
+        },
+        loadAdFeedback: function() {
+            messenger.sendMessage('loadAdFeedback', messenger.options.adCreativeMetaData);
+        },
+        forceFallback: function() {
+            fallback(true);
+        },
+        // API requires users to register a custom listener with videoAutoplayResponse key
+        requestVideoAutoplay: function() {
+            messenger.sendMessage('requestVideoAutoplay');
+        },
+        // API requires users to register a custom listener with videoAutoplayReleased key
+        releaseVideoAutoplay: function() {
+            messenger.sendMessage('releaseVideoAutoplay');
+        }
+    };
+    // constructs apis from the definitions
+    messenger.produceClientAPIs(apiDefinitions);
+
+    function getAanResponse() {
+        // Support both the DisplayAds and A9 method of getting aanResponse.
+        return window.aanResponse || (document.aanResponse ? document.aanResponse[messenger.options.slotName + 'adData'] : {});
+    }
+
+    /* Overwrite the window's onerror method to catch any unexpected errors
+     * coming from the creative code. We will log the error and attempt to
+     * show a different ad or collapse the slot.
+     */
+    var handleErrors = function(message, url, lineNumber, colNumber, errorObject) {
+        var err, errorMessage;
+        try {
+            err = errorObject || new Error(message, url, lineNumber);
+            errorMessage = err.message + ': ' + err.stack;
+        } catch (ex) {
+            // Error object creation fails in certain cases in IE10
+            err = null;
+            errorMessage = message;
+        }
+
+        if (messenger.client.isSupported()) {
+            messenger.client.logError(errorMessage, err);
+        } else {
+            localErrorLog('Error in Safeframe window ', errorMessage);
+        }
+
+        fallback();
+        // Returning true suppresses the default browser behavior
+        return true;
+    };
+    window.onerror = handleErrors;
+
+    function ensureGlobals() {
+        window.onerror = handleErrors;
+        window.$sf = $sf;
+    }
+
+    /*
+     * Override document.open so we can detect future writes and ensure globals are set
+     */
+    var nativeDocumentOpen = document.open;
+    //In IE7, document.open.apply is not defined.
+    var boundNativeDocumentOpen = (typeof nativeDocumentOpen.apply === 'function')
+        ? function() {
+            return nativeDocumentOpen.apply(document, arguments);
+        }
+        : function() {
+            return Function.apply.call(nativeDocumentOpen, document, arguments);
+        };
+
+    document.open = function(type, replace) {
+        boundNativeDocumentOpen(type, replace);
+        ensureGlobals();
+    };
+
+    /*
+     * Override document.write so we can detect blank
+     * ads from DoubleClick and fallback. Blank ads from
+     * DFP show up as a document.write of an empty string.
+     */
+    var nativeDocumentWrite = document.write;
+    //In IE7, document.write.apply is not defined.
+    var boundNativeDocumentWrite = (typeof nativeDocumentWrite.apply === 'function')
+        ? function() {
+            return nativeDocumentWrite.apply(document, arguments);
+        }
+        : function() {
+            return Function.apply.call(nativeDocumentWrite, document, arguments);
+        };
+
+    var debounceFallback = util.debounce(fallback, 25, false);
+
+    // Boolean flag to handle product ads
+    // TODO: remove this variable when product ads is migrated to AAX
+    /* eslint-disable no-useless-escape */
+    var productAdsRegex = /https?:\/\/[\w\d-.]*images-amazon\.com\/[\w\d-\/]+productAds\/js\/.*\.js/;
+    var viewabilityParamRegex = /d16g_renderOnView\s*:\s*[\'\"](.*)[\'\"][},]/;
+    /* eslint-enable no-useless-escape */
+
+    var shouldPrefetchAd = messenger.options.usePrefetchRoute || false;
+
+    // Called after an ad loads
+    var hasWrittenBefore = false;
+    var isDone = false;
+
+    /*
+     * Called by the creative for further mutations to the DOM
+     */
+    document.write = function(html) {
+        // Use this regex to determine when we are writing a product ads script and replace it with our own.
+        // TODO: remove this block when product ads is migrated to AAX
+        if (productAdsRegex.test(html)) {
+            messenger.client.countMetric('productads', 1, true);
+            window.productAdsUrl = messenger.options.productAdsUrl;
+            window.parentLocation = messenger.options.parentLocation;
+        }
+
+        if (!html && !isDone && !hasWrittenBefore) {
+            messenger.client.countMetric('debouncefallback', 1, true);
+            debounceFallback();
+        } else {
+            if (shouldPrefetchAd && viewabilityParamRegex.test(html) && html.match(viewabilityParamRegex)[1] === 'true') {
+                messenger.client.notifyWhenViewable();
+                messenger.client.registerCustomMessageListener('readyToRender', function(arid) {
+                    // Check that arid matches the current slot arid.
+                    if (arid === messenger.options.arid) {
+                        renderHtml(html);
+                    }
+                });
+            } else {
+                renderHtml(html);
+            }
+        }
+    };
+
+    function renderHtml(html) {
+        messenger.client.countMetric(AD_LOAD_COUNTERS.RENDER_START, 1);
+        var renderTrace = {};
+        renderTrace.readyState = document.readyState;
+        messenger.client.sendAdBarTrace('renderHtmlContentStart', renderTrace);
+        //Avoid issue when document.write happens after window load event
+        if (document.readyState === 'complete') {
+            document.open();
+        }
+        boundNativeDocumentWrite(html);
+        ensureGlobals();
+        document.close();
+        // Keep track of whether content has been written before to avoid collapsing
+        // after any content has been written
+        hasWrittenBefore = true;
+        addOnLoadListeners();
+
+        // Call done after a timeout to allow the written html to setup aanResponse
+        setTimeout(done, 0);
+        messenger.client.countMetric(AD_LOAD_COUNTERS.RENDER_END, 1);
+        renderTrace.readyState = document.readyState;
+        messenger.client.sendAdBarTrace('renderHtmlContentEnd', renderTrace);
+    }
+
+    function addOnLoadListeners() {
+        util.addWindowListener('load', fireLd);
+        util.addWindowListener('load', messenger.client.fireViewableLatencyMetrics);
+    }
+
+    var isLdFired = false;
+    function fireLd() {
+        if (!isLdFired) {
+            // only do this once
+            isLdFired = true;
+            messenger.client.sendMetrics('ld'); // Finish metrics
+        }
+    }
+
+    // render static ad. Since ad is not fetched from AAX, don't attempt to fire pixels.
+    function renderFallbackStaticAd(imgUrl, clickUrl, extraStyle) {
+        var style = extraStyle ? extraStyle : '';
+        var staticAdHtml = '<a target="_blank" href="' + clickUrl + '"><img src="' + imgUrl + '" ' + style + '></a>';
+        boundNativeDocumentWrite(staticAdHtml);
+        ensureGlobals();
+        util.ensureMessageListener(messenger.receiveMessage);
+        document.close();
+        messenger.client.loadAdFeedback();
+        isDone = true;
+    }
+
+    // Helper function for writing the ad script to the window
+    function writeScript(src, fallbackFunc) {
+        var fallbackStr = fallbackFunc ? fallbackFunc : '';
+        boundNativeDocumentWrite(['<scr', 'ipt type=\'text/javascript\', src=\'', src, '\', onerror=\'', fallbackStr, '\'></scr', 'ipt>'].join(''));
+    }
+
+    // Fallback logic. Ad Details can specify an array of
+    // fallback ads. Slot will collapse if there are no
+    // other ads.
+    function fallback(forced) {
+        if (!hasWrittenBefore || forced) {
+            var fallbackArray = messenger.options.fallback;
+            if (fallbackArray && fallbackArray.length > 0) {
+                messenger.client.countMetric('fallbackarray', 1, true);
+                var nextAdSrc = fallbackArray.shift();
+                nextAdSrc = (isSecure(messenger.options.hostDomain)) ? replaceWithSecure(nextAdSrc) : nextAdSrc;
+                writeScript(nextAdSrc);
+                hasWrittenBefore = true;
+            } else {
+                if (messenger.options.fallbackStaticAdImgUrl && messenger.options.fallbackStaticAdClickUrl) {
+                    renderFallbackStaticAd(messenger.options.fallbackStaticAdImgUrl, messenger.options.fallbackStaticAdClickUrl, messenger.options.fallbackStaticAdExtraStyle);
+                    hasWrittenBefore = true;
+                } else {
+                    messenger.client.collapseSlot();
+                }
+            }
+        }
+    }
+
+    function done() {
+        // Add Event Listener after document.write wipes out listeners.
+        util.ensureMessageListener(messenger.receiveMessage);
+        var doneTrace = {};
+        if (!isDone) {
+            // only do this once
+            doneTrace.firstInvocation = true;
+            isDone = true;
+            messenger.client.loadAdFeedback();
+            messenger.sendMessage('Done Loading');
+
+            // After ad has finished loading, fire any pixels we may have
+            setTimeout(fireAdPixels, messenger.options.adPixelDelay || 0);
+            doneTrace.adPixelDelay = messenger.options.adPixelDelay;
+
+            // Enable viewability tracker
+            messenger.sendMessage('enableViewabilityTracker');
+            messenger.client.countMetric(AD_LOAD_COUNTERS.CREATIVE_WRITTEN, 1);
+        } else {
+            doneTrace.firstInvocation = false;
+        }
+        messenger.client.sendAdBarTrace('doneFunction', doneTrace);
+    }
+
+    function checkAdBlockerImgImpact() {
+        var adImg = document.getElementsByTagName('img')[0];
+        //Add extra guard to avoid overriding img onerror execution script
+        if (adImg && adImg.src.indexOf('//:0') === -1 && !adImg.onerror) {
+            adImg.onerror = function() {
+                messenger.sendMessage('updateAdImgLoaded', {isLoaded: false});
+            };
+            adImg.onload = function() {
+                messenger.sendMessage('updateAdImgLoaded', {isLoaded: true});
+            };
+        }
+    }
+
+    // Add in message listener
+    if (window.addEventListener) {
+        window.addEventListener('message', messenger.receiveMessage, false);
+    } else if (window.attachEvent) {
+        window.attachEvent('message', messenger.receiveMessage);
+    }
+
+    // Set up the ad
+    // Parse out data
+    try {
+        messenger.options = JSON.parse(window.name);
+    } catch (ex) {
+        localErrorLog('Could not parse name ', ex);
+    }
+
+    //clear out the options to hide from the ad code
+    window.name = '';
+
+    /*
+     * We must prevent loaded ads from intercepting our messages
+     * or from preventing us from getting the messages.  This
+     * requires overriding the native add/remove listeners on window
+     * and filtering out requests regarding the 'message' event.
+     */
+
+    // Cache add/remove event listeners
+    var _addEventListener = window.addEventListener;
+    var _removeEventListener = window.removeEventListener;
+    var _attachEvent = window.attachEvent;
+    var _detachEvent = window.detachEvent;
+
+    function isMessageEvent(msgType) {
+        var type = String(msgType); // convert to string
+        type = type.toLowerCase();
+        return (type === 'message' || type === 'onmessage');
+    }
+
+    // override native add/remove event listener on window
+    if (window.addEventListener) {
+        window.addEventListener = function(type, listener, useCapture) {
+            _addEventListener.call(window, type, listener, useCapture);
+        };
+        window.removeEventListener = function(type, listener, useCapture) {
+            if (!isMessageEvent(type)) {
+                _removeEventListener.call(window, type, listener, useCapture);
+            }
+        };
+    }
+
+    // override native attach/detach event for older IEs on window
+    if (window.attachEvent) {
+        window.attachEvent = function(type, listener) {
+            return _attachEvent.call(window, type, listener);
+        };
+        window.detachEvent = function(type, listener) {
+            if (!isMessageEvent(type)) {
+                return _detachEvent.call(window, type, listener);
+            } else {
+                return false;
+            }
+        };
+    }
+
+    // TODO: Add support for cornerstone prefetch route
+    // Send clientBodyEnd right before writing the ad server call to record ad server latency
+    messenger.client.sendMetrics('be');
+    messenger.sendMessage('safeFrameReady');
+    messenger.client.countMetric(AD_LOAD_COUNTERS.IFRAME_INIT, 1);
+
+    // Do resizing logic when enableResizeFunc flag set to true
+    if (!messenger.options.disableResizeFunc) {
+        messenger.sendMessage('resizeSafeFrameAd');
+    }
+
+    //Enable ad blocker detector
+    if (messenger.options.enableAdBlockerDetector) {
+        messenger.sendMessage('loadAdBlockerDetectorScript');
+        //Check if ad image is blocked or not
+        checkAdBlockerImgImpact();
+    }
+
+    var loadAd = function(htmlContent) {
+        if (!hasWrittenBefore) {
+            var content = htmlContent;
+            if (messenger.options.clickTracking) {
+                content = clickTracking.replacePlaceholder(messenger.options.clickTracking, content);
+            }
+            renderHtml(content);
+        }
+    };
+
+    // The purpose of this function is to defer writing until the SFClient variable is set up
+    // before the write ad html code starts loading
+    window.writeAdHandler = null;
+    var adRenderFlowTrace = {};
+    adRenderFlowTrace.serverSide = messenger.options.serverSideFetchAd;
+    if (messenger.options.serverSideFetchAd === 'true') {
+        if (messenger.options.htmlContentEncoded) {
+            var htmlContent = decodeBase64(messenger.options.htmlContentEncoded);
+            adRenderFlowTrace.htmlContent = htmlContent;
+            window.writeAdHandler = function() {
+                loadAd(htmlContent);
+            };
+        } else {
+            handleNoAdContent();
+            //This is only logged in special cases to make the trace less confusing; only case were the outcome is not obvious in the log
+            adRenderFlowTrace.noAdContent = true;
+        }
+    } else {
+        var adSource = (isSecure(messenger.options.hostDomain)) ? replaceWithSecure(messenger.options.src) : messenger.options.src;
+        adRenderFlowTrace.adSource = adSource;
+        if (adSource && adSource.indexOf('x/getad') !== -1) {
+            window.writeAdHandler = function() {
+                createXGetAdRequest(adSource, fallback, boundNativeDocumentWrite, document.write);
+            };
+            adRenderFlowTrace.isXsp = false;
+        } else {
+            window.writeAdHandler = function() {
+                createXspRequest(adSource, messenger.options, handleNoAdContent, boundNativeDocumentWrite, loadAd);
+            };
+            adRenderFlowTrace.isXsp = true;
+        }
+    }
+    messenger.client.sendAdBarTrace('adRenderFlow', adRenderFlowTrace);
+    // Return client object
+    return messenger.client;
+})(window, document);
+if (typeof window.writeAdHandler === 'function') {
+    window.writeAdHandler();
+}
+
+},{"./components/clickTracking":1,"./components/sfAPI":2,"./components/sfCounters":3,"./components/sfMsgHandler":4,"./components/util":5}]},{},[6]);
+            </script><style>.ac{display:block;position:absolute;overflow:hidden;width:19px;height:15px;z-index:9;top:0;right:0;background:url(https://images-eu.ssl-images-amazon.com/images/G/03/da/adchoices/ac-topright-sprite.png)}.ac:hover{width:97px;background-position:-19px 0}.hide{display:none!important}#staticImage{border:0}#ad{position:relative;overflow:hidden;width:300px;height:250px;display:none}</style><div id="creative-wrapper" style="width: 100%;height:250px;">
+  <a id="ad" href="https://aax-eu.amazon-adsystem.com/x/c/QoUb-cdkPPtHLy7vELvB-HQAAAFm8zOT9QMAAAH6AUMguy0/https://www.amazon.de/dp/B07H4SWT6H/ref=o_disp_dvm_de_pivhouse_ft_009" target="_top" style="display: block;">
+<img id="staticImage" width="100%" height="100%" src="./Deutschland-86-DE-XSite-HouseAds-300x250-06uXy._V480332640_.jpg"></a><a id="logo"></a><a id="aapInfo" target="_blank" class="hide ac" href="https://amazon.de/adprefs/ref=cs_aap_5730923000202"></a></div><script>setTimeout(function(){!function(a,e,t){var n=/\.amazon\.(com|de)(:.*)?$/,i="undefined"!=typeof IS_3P&&IS_3P,o=!1;if(!i){var c=a;if(c.SFClient)o=c.SFClient.isOnAmazon();else{try{for(;c!=c.parent;){if(!c.parent.document)throw new Error("cross-domain exception");c=c.parent}}catch(s){}try{o=c.SFClient?c.SFClient.isOnAmazon():n.test(c.location.host)}catch(s){}}}var r=!i&&!o;e.ad={aid:"8258794610702",cid:"5730923000202",w:300,h:250,template:"Image-1.71"},a.aanResponse={adId:e.ad.aid,creativeId:e.ad.cid,adNetwork:"pda",shazamStage:"prod",shazamId:"9130186"};try{t&&t.ad_utils&&t.ad_utils.expand_ad(frameElement)}catch(s){}var d=function(a){return/s/.test(a.protocol)},m=function(a){return e.getElementById(a)},f=function(a,e,t){a.href=e,a.target=t?"_blank":"_top"},l=function(a,e){return a.className.match(new RegExp("(\\s|^)"+e+"(\\s|$)"))},p=function(a,e){l(a,e)||(a.className+=" "+e)},u=function(a,e){if(l(a,e)){var t=new RegExp("(\\s|^)"+e+"(\\s|$)");a.className=a.className.replace(t," ")}},h=function(a){u(a,"hide")},g=(d(location)?"//images-na.ssl-":"//g-ecx.")+"images-amazon.com/images/G/03/",z=m("aapInfo"),_=m("ad"),y="shazam/Deutschland-86-DE-XSite-HouseAds-300x250-06uXy._V480332640_.jpg",S=m("staticImage");y&&(S.src=g+y,_.style.display="block");var v;i&&p(_,"aap"),(i||r)&&(_.target="_blank"),z&&i&&h(z),v&&f(z,"https://amazon.de/adprefs",!0);var I=a.SFClient;if(I&&"function"==typeof I.changeSize&&"function"==typeof I.isOnAmazon&&(!I.isOnAmazon(),!0))try{I.changeSize("300px","250px")}catch(s){}}(window,document,parent)},0);</script>
+
+        </div>
+    
+
+<img id="ape_impression" src="./imp" style="display: none;"><img id="ape_amzn_viewability" src="./{_wh__1307,_ww__2560,_sx__0,_sy__0,_ah__250,_aw__300,_top__453,_left__1725,_v__{_p__0,_t__0,_def___amzn_},_ptv__0.747,_ttv__0.44}" style="display: none;"><img id="ape_groupm_viewability" src="./{_wh__1307,_ww__2560,_sx__0,_sy__0,_ah__250,_aw__300,_top__453,_left__1725,_v__{_p__100,_t__0,_def___groupm_},_ptv__0.747,_ttv__0.44}" style="display: none;"><img id="ape_iab_viewability" src="./{_wh__1307,_ww__2560,_sx__0,_sy__0,_ah__250,_aw__300,_top__453,_left__1725,_v__{_p__50,_t__1,_def___iab_},_ptv__1.746,_ttv__1.439}" style="display: none;"></body></html>
