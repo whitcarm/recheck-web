@@ -93,15 +93,7 @@
 							<value xsi:type="xsd:string">rgb(131, 140, 149)</value>
 						</entry>
 						<entry>
-							<key>caret-color</key>
-							<value xsi:type="xsd:string">rgb(131, 140, 149)</value>
-						</entry>
-						<entry>
 							<key>color</key>
-							<value xsi:type="xsd:string">rgb(131, 140, 149)</value>
-						</entry>
-						<entry>
-							<key>column-rule-color</key>
 							<value xsi:type="xsd:string">rgb(131, 140, 149)</value>
 						</entry>
 						<entry>
@@ -115,14 +107,6 @@
 						<entry>
 							<key>line-height</key>
 							<value xsi:type="xsd:string">30px</value>
-						</entry>
-						<entry>
-							<key>outline-color</key>
-							<value xsi:type="xsd:string">rgb(131, 140, 149)</value>
-						</entry>
-						<entry>
-							<key>text-decoration-color</key>
-							<value xsi:type="xsd:string">rgb(131, 140, 149)</value>
 						</entry>
 					</attributes>
 				</attributes>
@@ -342,23 +326,7 @@
 													<value xsi:type="xsd:string">rgb(193, 216, 47)</value>
 												</entry>
 												<entry>
-													<key>caret-color</key>
-													<value xsi:type="xsd:string">rgb(193, 216, 47)</value>
-												</entry>
-												<entry>
 													<key>color</key>
-													<value xsi:type="xsd:string">rgb(193, 216, 47)</value>
-												</entry>
-												<entry>
-													<key>column-rule-color</key>
-													<value xsi:type="xsd:string">rgb(193, 216, 47)</value>
-												</entry>
-												<entry>
-													<key>outline-color</key>
-													<value xsi:type="xsd:string">rgb(193, 216, 47)</value>
-												</entry>
-												<entry>
-													<key>text-decoration-color</key>
 													<value xsi:type="xsd:string">rgb(193, 216, 47)</value>
 												</entry>
 												<entry>
@@ -538,23 +506,7 @@
 												<value xsi:type="xsd:string">rgb(193, 216, 47)</value>
 											</entry>
 											<entry>
-												<key>caret-color</key>
-												<value xsi:type="xsd:string">rgb(193, 216, 47)</value>
-											</entry>
-											<entry>
 												<key>color</key>
-												<value xsi:type="xsd:string">rgb(193, 216, 47)</value>
-											</entry>
-											<entry>
-												<key>column-rule-color</key>
-												<value xsi:type="xsd:string">rgb(193, 216, 47)</value>
-											</entry>
-											<entry>
-												<key>outline-color</key>
-												<value xsi:type="xsd:string">rgb(193, 216, 47)</value>
-											</entry>
-											<entry>
-												<key>text-decoration-color</key>
 												<value xsi:type="xsd:string">rgb(193, 216, 47)</value>
 											</entry>
 											<entry>
@@ -682,10 +634,6 @@
 												<value xsi:type="xsd:string">inline</value>
 											</entry>
 											<entry>
-												<key>margin-top</key>
-												<value xsi:type="xsd:string">0px</value>
-											</entry>
-											<entry>
 												<key>min-height</key>
 												<value xsi:type="xsd:string">48px</value>
 											</entry>
@@ -774,15 +722,7 @@
 															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 														</entry>
 														<entry>
-															<key>caret-color</key>
-															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-														</entry>
-														<entry>
 															<key>color</key>
-															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-														</entry>
-														<entry>
-															<key>column-rule-color</key>
 															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 														</entry>
 														<entry>
@@ -792,10 +732,6 @@
 														<entry>
 															<key>line-height</key>
 															<value xsi:type="xsd:string">32px</value>
-														</entry>
-														<entry>
-															<key>outline-color</key>
-															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 														</entry>
 														<entry>
 															<key>padding-bottom</key>
@@ -812,10 +748,6 @@
 														<entry>
 															<key>padding-top</key>
 															<value xsi:type="xsd:string">8px</value>
-														</entry>
-														<entry>
-															<key>text-decoration-color</key>
-															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 														</entry>
 														<entry>
 															<key>transition-duration</key>
@@ -975,15 +907,7 @@
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
-																<key>caret-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
 																<key>color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
-																<key>column-rule-color</key>
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
@@ -997,10 +921,6 @@
 															<entry>
 																<key>line-height</key>
 																<value xsi:type="xsd:string">32px</value>
-															</entry>
-															<entry>
-																<key>outline-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>padding-bottom</key>
@@ -1017,10 +937,6 @@
 															<entry>
 																<key>padding-top</key>
 																<value xsi:type="xsd:string">6px</value>
-															</entry>
-															<entry>
-																<key>text-decoration-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>transition-duration</key>
@@ -1114,15 +1030,7 @@
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
-																<key>caret-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
 																<key>color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
-																<key>column-rule-color</key>
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
@@ -1136,10 +1044,6 @@
 															<entry>
 																<key>line-height</key>
 																<value xsi:type="xsd:string">32px</value>
-															</entry>
-															<entry>
-																<key>outline-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>padding-bottom</key>
@@ -1156,10 +1060,6 @@
 															<entry>
 																<key>padding-top</key>
 																<value xsi:type="xsd:string">6px</value>
-															</entry>
-															<entry>
-																<key>text-decoration-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>transition-duration</key>
@@ -1253,15 +1153,7 @@
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
-																<key>caret-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
 																<key>color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
-																<key>column-rule-color</key>
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
@@ -1275,10 +1167,6 @@
 															<entry>
 																<key>line-height</key>
 																<value xsi:type="xsd:string">32px</value>
-															</entry>
-															<entry>
-																<key>outline-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>padding-bottom</key>
@@ -1295,10 +1183,6 @@
 															<entry>
 																<key>padding-top</key>
 																<value xsi:type="xsd:string">6px</value>
-															</entry>
-															<entry>
-																<key>text-decoration-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>transition-duration</key>
@@ -1392,15 +1276,7 @@
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
-																<key>caret-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
 																<key>color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
-																<key>column-rule-color</key>
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
@@ -1414,10 +1290,6 @@
 															<entry>
 																<key>line-height</key>
 																<value xsi:type="xsd:string">32px</value>
-															</entry>
-															<entry>
-																<key>outline-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>padding-bottom</key>
@@ -1434,10 +1306,6 @@
 															<entry>
 																<key>padding-top</key>
 																<value xsi:type="xsd:string">6px</value>
-															</entry>
-															<entry>
-																<key>text-decoration-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>transition-duration</key>
@@ -1540,15 +1408,7 @@
 															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 														</entry>
 														<entry>
-															<key>caret-color</key>
-															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-														</entry>
-														<entry>
 															<key>color</key>
-															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-														</entry>
-														<entry>
-															<key>column-rule-color</key>
 															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 														</entry>
 														<entry>
@@ -1558,10 +1418,6 @@
 														<entry>
 															<key>line-height</key>
 															<value xsi:type="xsd:string">32px</value>
-														</entry>
-														<entry>
-															<key>outline-color</key>
-															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 														</entry>
 														<entry>
 															<key>padding-bottom</key>
@@ -1578,10 +1434,6 @@
 														<entry>
 															<key>padding-top</key>
 															<value xsi:type="xsd:string">8px</value>
-														</entry>
-														<entry>
-															<key>text-decoration-color</key>
-															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 														</entry>
 														<entry>
 															<key>transition-duration</key>
@@ -1737,15 +1589,7 @@
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
-																<key>caret-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
 																<key>color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
-																<key>column-rule-color</key>
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
@@ -1759,10 +1603,6 @@
 															<entry>
 																<key>line-height</key>
 																<value xsi:type="xsd:string">32px</value>
-															</entry>
-															<entry>
-																<key>outline-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>padding-bottom</key>
@@ -1779,10 +1619,6 @@
 															<entry>
 																<key>padding-top</key>
 																<value xsi:type="xsd:string">6px</value>
-															</entry>
-															<entry>
-																<key>text-decoration-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>transition-duration</key>
@@ -1876,15 +1712,7 @@
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
-																<key>caret-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
 																<key>color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
-																<key>column-rule-color</key>
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
@@ -1898,10 +1726,6 @@
 															<entry>
 																<key>line-height</key>
 																<value xsi:type="xsd:string">32px</value>
-															</entry>
-															<entry>
-																<key>outline-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>padding-bottom</key>
@@ -1918,10 +1742,6 @@
 															<entry>
 																<key>padding-top</key>
 																<value xsi:type="xsd:string">6px</value>
-															</entry>
-															<entry>
-																<key>text-decoration-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>transition-duration</key>
@@ -2015,15 +1835,7 @@
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
-																<key>caret-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
 																<key>color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
-																<key>column-rule-color</key>
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
@@ -2037,10 +1849,6 @@
 															<entry>
 																<key>line-height</key>
 																<value xsi:type="xsd:string">32px</value>
-															</entry>
-															<entry>
-																<key>outline-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>padding-bottom</key>
@@ -2057,10 +1865,6 @@
 															<entry>
 																<key>padding-top</key>
 																<value xsi:type="xsd:string">6px</value>
-															</entry>
-															<entry>
-																<key>text-decoration-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>transition-duration</key>
@@ -2163,15 +1967,7 @@
 															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 														</entry>
 														<entry>
-															<key>caret-color</key>
-															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-														</entry>
-														<entry>
 															<key>color</key>
-															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-														</entry>
-														<entry>
-															<key>column-rule-color</key>
 															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 														</entry>
 														<entry>
@@ -2181,10 +1977,6 @@
 														<entry>
 															<key>line-height</key>
 															<value xsi:type="xsd:string">32px</value>
-														</entry>
-														<entry>
-															<key>outline-color</key>
-															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 														</entry>
 														<entry>
 															<key>padding-bottom</key>
@@ -2201,10 +1993,6 @@
 														<entry>
 															<key>padding-top</key>
 															<value xsi:type="xsd:string">8px</value>
-														</entry>
-														<entry>
-															<key>text-decoration-color</key>
-															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 														</entry>
 														<entry>
 															<key>transition-duration</key>
@@ -2364,15 +2152,7 @@
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
-																<key>caret-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
 																<key>color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
-																<key>column-rule-color</key>
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
@@ -2386,10 +2166,6 @@
 															<entry>
 																<key>line-height</key>
 																<value xsi:type="xsd:string">32px</value>
-															</entry>
-															<entry>
-																<key>outline-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>padding-bottom</key>
@@ -2406,10 +2182,6 @@
 															<entry>
 																<key>padding-top</key>
 																<value xsi:type="xsd:string">6px</value>
-															</entry>
-															<entry>
-																<key>text-decoration-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>transition-duration</key>
@@ -2503,15 +2275,7 @@
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
-																<key>caret-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
 																<key>color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
-																<key>column-rule-color</key>
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
@@ -2525,10 +2289,6 @@
 															<entry>
 																<key>line-height</key>
 																<value xsi:type="xsd:string">32px</value>
-															</entry>
-															<entry>
-																<key>outline-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>padding-bottom</key>
@@ -2545,10 +2305,6 @@
 															<entry>
 																<key>padding-top</key>
 																<value xsi:type="xsd:string">6px</value>
-															</entry>
-															<entry>
-																<key>text-decoration-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>transition-duration</key>
@@ -2642,15 +2398,7 @@
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
-																<key>caret-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
 																<key>color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
-																<key>column-rule-color</key>
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
@@ -2664,10 +2412,6 @@
 															<entry>
 																<key>line-height</key>
 																<value xsi:type="xsd:string">32px</value>
-															</entry>
-															<entry>
-																<key>outline-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>padding-bottom</key>
@@ -2684,10 +2428,6 @@
 															<entry>
 																<key>padding-top</key>
 																<value xsi:type="xsd:string">6px</value>
-															</entry>
-															<entry>
-																<key>text-decoration-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>transition-duration</key>
@@ -2790,15 +2530,7 @@
 															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 														</entry>
 														<entry>
-															<key>caret-color</key>
-															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-														</entry>
-														<entry>
 															<key>color</key>
-															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-														</entry>
-														<entry>
-															<key>column-rule-color</key>
 															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 														</entry>
 														<entry>
@@ -2808,10 +2540,6 @@
 														<entry>
 															<key>line-height</key>
 															<value xsi:type="xsd:string">32px</value>
-														</entry>
-														<entry>
-															<key>outline-color</key>
-															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 														</entry>
 														<entry>
 															<key>padding-bottom</key>
@@ -2828,10 +2556,6 @@
 														<entry>
 															<key>padding-top</key>
 															<value xsi:type="xsd:string">8px</value>
-														</entry>
-														<entry>
-															<key>text-decoration-color</key>
-															<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 														</entry>
 														<entry>
 															<key>transition-duration</key>
@@ -2991,15 +2715,7 @@
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
-																<key>caret-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
 																<key>color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
-																<key>column-rule-color</key>
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
@@ -3013,10 +2729,6 @@
 															<entry>
 																<key>line-height</key>
 																<value xsi:type="xsd:string">32px</value>
-															</entry>
-															<entry>
-																<key>outline-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>padding-bottom</key>
@@ -3033,10 +2745,6 @@
 															<entry>
 																<key>padding-top</key>
 																<value xsi:type="xsd:string">6px</value>
-															</entry>
-															<entry>
-																<key>text-decoration-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>transition-duration</key>
@@ -3130,15 +2838,7 @@
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
-																<key>caret-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
 																<key>color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
-																<key>column-rule-color</key>
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
@@ -3152,10 +2852,6 @@
 															<entry>
 																<key>line-height</key>
 																<value xsi:type="xsd:string">32px</value>
-															</entry>
-															<entry>
-																<key>outline-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>padding-bottom</key>
@@ -3172,10 +2868,6 @@
 															<entry>
 																<key>padding-top</key>
 																<value xsi:type="xsd:string">6px</value>
-															</entry>
-															<entry>
-																<key>text-decoration-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>transition-duration</key>
@@ -3269,15 +2961,7 @@
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
-																<key>caret-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
 																<key>color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
-																<key>column-rule-color</key>
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
@@ -3291,10 +2975,6 @@
 															<entry>
 																<key>line-height</key>
 																<value xsi:type="xsd:string">32px</value>
-															</entry>
-															<entry>
-																<key>outline-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>padding-bottom</key>
@@ -3311,10 +2991,6 @@
 															<entry>
 																<key>padding-top</key>
 																<value xsi:type="xsd:string">6px</value>
-															</entry>
-															<entry>
-																<key>text-decoration-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>transition-duration</key>
@@ -3403,24 +3079,12 @@
 														<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 													</entry>
 													<entry>
-														<key>caret-color</key>
-														<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-													</entry>
-													<entry>
 														<key>color</key>
-														<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-													</entry>
-													<entry>
-														<key>column-rule-color</key>
 														<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 													</entry>
 													<entry>
 														<key>line-height</key>
 														<value xsi:type="xsd:string">32px</value>
-													</entry>
-													<entry>
-														<key>outline-color</key>
-														<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 													</entry>
 													<entry>
 														<key>padding-bottom</key>
@@ -3437,10 +3101,6 @@
 													<entry>
 														<key>padding-top</key>
 														<value xsi:type="xsd:string">8px</value>
-													</entry>
-													<entry>
-														<key>text-decoration-color</key>
-														<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 													</entry>
 													<entry>
 														<key>transition-duration</key>
@@ -3725,15 +3385,7 @@
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
-																<key>caret-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
 																<key>color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
-															</entry>
-															<entry>
-																<key>column-rule-color</key>
 																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
@@ -3747,10 +3399,6 @@
 															<entry>
 																<key>line-height</key>
 																<value xsi:type="xsd:string">32px</value>
-															</entry>
-															<entry>
-																<key>outline-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>padding-bottom</key>
@@ -3767,10 +3415,6 @@
 															<entry>
 																<key>padding-top</key>
 																<value xsi:type="xsd:string">5px</value>
-															</entry>
-															<entry>
-																<key>text-decoration-color</key>
-																<value xsi:type="xsd:string">rgb(0, 0, 51)</value>
 															</entry>
 															<entry>
 																<key>transition-duration</key>

@@ -84,60 +84,12 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
 								<entry>
 									<key>margin-bottom</key>
 									<value xsi:type="xsd:string">0px</value>
-								</entry>
-								<entry>
-									<key>padding-bottom</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>padding-top</key>
-									<value xsi:type="xsd:string">1px</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -160,60 +112,12 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
 								<entry>
 									<key>margin-bottom</key>
 									<value xsi:type="xsd:string">0px</value>
-								</entry>
-								<entry>
-									<key>padding-bottom</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>padding-top</key>
-									<value xsi:type="xsd:string">1px</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -235,66 +139,6 @@
 						</identifyingAttributes>
 						<attributes>
 							<attributes>
-								<entry>
-									<key>align-items</key>
-									<value xsi:type="xsd:string">flex-start</value>
-								</entry>
-								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">outset</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">outset</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">outset</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">outset</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
 								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
@@ -318,14 +162,6 @@
 								<entry>
 									<key>padding-top</key>
 									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>text-align</key>
-									<value xsi:type="xsd:string">center</value>
-								</entry>
-								<entry>
-									<key>white-space</key>
-									<value xsi:type="xsd:string">pre</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -364,10 +200,6 @@
 						</identifyingAttributes>
 						<attributes>
 							<attributes>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
 								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
@@ -478,66 +310,6 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>align-items</key>
-									<value xsi:type="xsd:string">flex-start</value>
-								</entry>
-								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">outset</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">outset</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">outset</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">outset</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
@@ -561,14 +333,6 @@
 									<key>padding-top</key>
 									<value xsi:type="xsd:string">1px</value>
 								</entry>
-								<entry>
-									<key>text-align</key>
-									<value xsi:type="xsd:string">center</value>
-								</entry>
-								<entry>
-									<key>white-space</key>
-									<value xsi:type="xsd:string">pre</value>
-								</entry>
 							</attributes>
 						</attributes>
 					</containedComponents>
@@ -591,38 +355,6 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>border-bottom-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>caret-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>column-rule-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
@@ -639,20 +371,8 @@
 									<value xsi:type="xsd:string">3px</value>
 								</entry>
 								<entry>
-									<key>min-height</key>
-									<value xsi:type="xsd:string">13px</value>
-								</entry>
-								<entry>
 									<key>min-width</key>
 									<value xsi:type="xsd:string">13px</value>
-								</entry>
-								<entry>
-									<key>outline-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>text-decoration-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -676,10 +396,6 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
@@ -690,10 +406,6 @@
 								<entry>
 									<key>margin-right</key>
 									<value xsi:type="xsd:string">3px</value>
-								</entry>
-								<entry>
-									<key>min-height</key>
-									<value xsi:type="xsd:string">13px</value>
 								</entry>
 								<entry>
 									<key>min-width</key>
@@ -721,10 +433,6 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
@@ -735,10 +443,6 @@
 								<entry>
 									<key>margin-right</key>
 									<value xsi:type="xsd:string">3px</value>
-								</entry>
-								<entry>
-									<key>min-height</key>
-									<value xsi:type="xsd:string">13px</value>
 								</entry>
 								<entry>
 									<key>min-width</key>
@@ -766,36 +470,8 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>border-bottom-color</key>
+									<key>border-color</key>
 									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>caret-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>column-rule-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
 								</entry>
 								<entry>
 									<key>font-size</key>
@@ -810,20 +486,8 @@
 									<value xsi:type="xsd:string">3px</value>
 								</entry>
 								<entry>
-									<key>min-height</key>
-									<value xsi:type="xsd:string">13px</value>
-								</entry>
-								<entry>
 									<key>min-width</key>
 									<value xsi:type="xsd:string">13px</value>
-								</entry>
-								<entry>
-									<key>outline-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>text-decoration-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -847,36 +511,8 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>border-bottom-color</key>
+									<key>border-color</key>
 									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>caret-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>column-rule-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
 								</entry>
 								<entry>
 									<key>font-size</key>
@@ -891,20 +527,8 @@
 									<value xsi:type="xsd:string">3px</value>
 								</entry>
 								<entry>
-									<key>min-height</key>
-									<value xsi:type="xsd:string">13px</value>
-								</entry>
-								<entry>
 									<key>min-width</key>
 									<value xsi:type="xsd:string">13px</value>
-								</entry>
-								<entry>
-									<key>outline-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>text-decoration-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -928,10 +552,6 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
@@ -946,10 +566,6 @@
 								<entry>
 									<key>margin-right</key>
 									<value xsi:type="xsd:string">3px</value>
-								</entry>
-								<entry>
-									<key>min-height</key>
-									<value xsi:type="xsd:string">13px</value>
 								</entry>
 								<entry>
 									<key>min-width</key>
@@ -977,10 +593,6 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
@@ -995,10 +607,6 @@
 								<entry>
 									<key>margin-right</key>
 									<value xsi:type="xsd:string">3px</value>
-								</entry>
-								<entry>
-									<key>min-height</key>
-									<value xsi:type="xsd:string">13px</value>
 								</entry>
 								<entry>
 									<key>min-width</key>
@@ -1026,10 +634,6 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
@@ -1044,10 +648,6 @@
 								<entry>
 									<key>margin-right</key>
 									<value xsi:type="xsd:string">3px</value>
-								</entry>
-								<entry>
-									<key>min-height</key>
-									<value xsi:type="xsd:string">13px</value>
 								</entry>
 								<entry>
 									<key>min-width</key>
@@ -1075,36 +675,8 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>border-bottom-color</key>
+									<key>border-color</key>
 									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>caret-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>column-rule-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
 								</entry>
 								<entry>
 									<key>font-size</key>
@@ -1123,20 +695,8 @@
 									<value xsi:type="xsd:string">3px</value>
 								</entry>
 								<entry>
-									<key>min-height</key>
-									<value xsi:type="xsd:string">13px</value>
-								</entry>
-								<entry>
 									<key>min-width</key>
 									<value xsi:type="xsd:string">13px</value>
-								</entry>
-								<entry>
-									<key>outline-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>text-decoration-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -1160,36 +720,8 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>border-bottom-color</key>
+									<key>border-color</key>
 									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>caret-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>column-rule-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
 								</entry>
 								<entry>
 									<key>font-size</key>
@@ -1208,20 +740,8 @@
 									<value xsi:type="xsd:string">3px</value>
 								</entry>
 								<entry>
-									<key>min-height</key>
-									<value xsi:type="xsd:string">13px</value>
-								</entry>
-								<entry>
 									<key>min-width</key>
 									<value xsi:type="xsd:string">13px</value>
-								</entry>
-								<entry>
-									<key>outline-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>text-decoration-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -1261,72 +781,8 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>align-items</key>
-									<value xsi:type="xsd:string">center</value>
-								</entry>
-								<entry>
 									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>box-sizing</key>
-									<value xsi:type="xsd:string">border-box</value>
-								</entry>
-								<entry>
-									<key>display</key>
-									<value xsi:type="xsd:string">inline-block</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
+									<value xsi:type="xsd:string">rgb(248, 248, 248)</value>
 								</entry>
 								<entry>
 									<key>font-size</key>
@@ -1359,18 +815,6 @@
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
 									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -1396,18 +840,6 @@
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
 									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -1430,80 +862,12 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>align-items</key>
-									<value xsi:type="xsd:string">center</value>
-								</entry>
-								<entry>
 									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>box-sizing</key>
-									<value xsi:type="xsd:string">border-box</value>
-								</entry>
-								<entry>
-									<key>display</key>
-									<value xsi:type="xsd:string">inline-block</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
+									<value xsi:type="xsd:string">rgb(248, 248, 248)</value>
 								</entry>
 								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
-								</entry>
-								<entry>
-									<key>white-space</key>
-									<value xsi:type="xsd:string">pre</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -1529,18 +893,6 @@
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
 									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -1564,18 +916,6 @@
 									<entry>
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
 									</entry>
 								</attributes>
 							</attributes>
@@ -1601,18 +941,6 @@
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
 									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -1636,18 +964,6 @@
 									<entry>
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
 									</entry>
 								</attributes>
 							</attributes>
@@ -1676,68 +992,8 @@
 									<value xsi:type="xsd:string">flex-start</value>
 								</entry>
 								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-color</key>
+									<key>border-color</key>
 									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>box-sizing</key>
-									<value xsi:type="xsd:string">border-box</value>
-								</entry>
-								<entry>
-									<key>display</key>
-									<value xsi:type="xsd:string">inline-block</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
 								</entry>
 								<entry>
 									<key>font-size</key>
@@ -1783,60 +1039,8 @@
 										<value xsi:type="xsd:string">rgb(200, 200, 200)</value>
 									</entry>
 									<entry>
-										<key>border-bottom-color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
-										<key>border-left-color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
-										<key>border-right-color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
-										<key>border-top-color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
-										<key>caret-color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
-										<key>color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
-										<key>column-rule-color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>outline-color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>text-decoration-color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
-										<key>white-space</key>
-										<value xsi:type="xsd:string">pre</value>
 									</entry>
 								</attributes>
 							</attributes>
@@ -1861,22 +1065,6 @@
 									<entry>
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>white-space</key>
-										<value xsi:type="xsd:string">pre</value>
 									</entry>
 								</attributes>
 							</attributes>
@@ -1903,60 +1091,8 @@
 										<value xsi:type="xsd:string">rgb(200, 200, 200)</value>
 									</entry>
 									<entry>
-										<key>border-bottom-color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
-										<key>border-left-color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
-										<key>border-right-color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
-										<key>border-top-color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
-										<key>caret-color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
-										<key>color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
-										<key>column-rule-color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>outline-color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>text-decoration-color</key>
-										<value xsi:type="xsd:string">rgb(50, 50, 50)</value>
-									</entry>
-									<entry>
-										<key>white-space</key>
-										<value xsi:type="xsd:string">pre</value>
 									</entry>
 								</attributes>
 							</attributes>
@@ -1982,22 +1118,6 @@
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
 									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>white-space</key>
-										<value xsi:type="xsd:string">pre</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -2020,100 +1140,12 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>align-items</key>
-									<value xsi:type="xsd:string">center</value>
-								</entry>
-								<entry>
 									<key>background-color</key>
 									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
 								</entry>
 								<entry>
-									<key>border-bottom-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>box-sizing</key>
-									<value xsi:type="xsd:string">border-box</value>
-								</entry>
-								<entry>
-									<key>caret-color</key>
-									<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
-								</entry>
-								<entry>
-									<key>color</key>
-									<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
-								</entry>
-								<entry>
-									<key>column-rule-color</key>
-									<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
-								</entry>
-								<entry>
-									<key>display</key>
-									<value xsi:type="xsd:string">inline-block</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
-								</entry>
-								<entry>
-									<key>outline-color</key>
-									<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
-								</entry>
-								<entry>
-									<key>text-decoration-color</key>
-									<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
-								</entry>
-								<entry>
-									<key>white-space</key>
-									<value xsi:type="xsd:string">pre</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -2135,36 +1167,12 @@
 							<attributes>
 								<attributes>
 									<entry>
-										<key>border-bottom-color</key>
-										<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
-									</entry>
-									<entry>
-										<key>border-left-color</key>
-										<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
-									</entry>
-									<entry>
-										<key>border-right-color</key>
-										<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
-									</entry>
-									<entry>
-										<key>border-top-color</key>
+										<key>border-color</key>
 										<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
 									</entry>
 									<entry>
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
 									</entry>
 								</attributes>
 							</attributes>
@@ -2187,36 +1195,12 @@
 							<attributes>
 								<attributes>
 									<entry>
-										<key>border-bottom-color</key>
-										<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
-									</entry>
-									<entry>
-										<key>border-left-color</key>
-										<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
-									</entry>
-									<entry>
-										<key>border-right-color</key>
-										<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
-									</entry>
-									<entry>
-										<key>border-top-color</key>
+										<key>border-color</key>
 										<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
 									</entry>
 									<entry>
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
 									</entry>
 								</attributes>
 							</attributes>
@@ -2244,68 +1228,8 @@
 									<value xsi:type="xsd:string">flex-start</value>
 								</entry>
 								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-color</key>
+									<key>border-color</key>
 									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>box-sizing</key>
-									<value xsi:type="xsd:string">border-box</value>
-								</entry>
-								<entry>
-									<key>display</key>
-									<value xsi:type="xsd:string">inline-block</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
 								</entry>
 								<entry>
 									<key>font-size</key>
@@ -2351,22 +1275,6 @@
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
 									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>white-space</key>
-										<value xsi:type="xsd:string">pre</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -2391,22 +1299,6 @@
 									<entry>
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>white-space</key>
-										<value xsi:type="xsd:string">pre</value>
 									</entry>
 								</attributes>
 							</attributes>
@@ -2433,22 +1325,6 @@
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
 									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>white-space</key>
-										<value xsi:type="xsd:string">pre</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -2473,22 +1349,6 @@
 									<entry>
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>white-space</key>
-										<value xsi:type="xsd:string">pre</value>
 									</entry>
 								</attributes>
 							</attributes>
@@ -2516,68 +1376,8 @@
 									<value xsi:type="xsd:string">flex-start</value>
 								</entry>
 								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-color</key>
+									<key>border-color</key>
 									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>box-sizing</key>
-									<value xsi:type="xsd:string">border-box</value>
-								</entry>
-								<entry>
-									<key>display</key>
-									<value xsi:type="xsd:string">inline-block</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
 								</entry>
 								<entry>
 									<key>font-size</key>
@@ -2623,22 +1423,6 @@
 										<key>min-height</key>
 										<value xsi:type="xsd:string">16px</value>
 									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>white-space</key>
-										<value xsi:type="xsd:string">pre</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -2660,26 +1444,6 @@
 							</identifyingAttributes>
 							<attributes>
 								<attributes>
-									<entry>
-										<key>min-height</key>
-										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>white-space</key>
-										<value xsi:type="xsd:string">pre</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -2702,72 +1466,8 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>align-items</key>
-									<value xsi:type="xsd:string">flex-start</value>
-								</entry>
-								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-color</key>
+									<key>border-color</key>
 									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>box-sizing</key>
-									<value xsi:type="xsd:string">border-box</value>
-								</entry>
-								<entry>
-									<key>display</key>
-									<value xsi:type="xsd:string">inline-block</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
 								</entry>
 								<entry>
 									<key>font-size</key>
@@ -2809,26 +1509,6 @@
 							</identifyingAttributes>
 							<attributes>
 								<attributes>
-									<entry>
-										<key>min-height</key>
-										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>white-space</key>
-										<value xsi:type="xsd:string">pre</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -2850,26 +1530,6 @@
 							</identifyingAttributes>
 							<attributes>
 								<attributes>
-									<entry>
-										<key>min-height</key>
-										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>white-space</key>
-										<value xsi:type="xsd:string">pre</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -2900,76 +1560,8 @@
 									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
 								</entry>
 								<entry>
-									<key>border-bottom-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>box-sizing</key>
-									<value xsi:type="xsd:string">border-box</value>
-								</entry>
-								<entry>
-									<key>display</key>
-									<value xsi:type="xsd:string">inline-block</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
-								</entry>
-								<entry>
-									<key>opacity</key>
-									<value xsi:type="xsd:string">0</value>
-								</entry>
-								<entry>
-									<key>white-space</key>
-									<value xsi:type="xsd:string">pre</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -2990,22 +1582,6 @@
 							</identifyingAttributes>
 							<attributes>
 								<attributes>
-									<entry>
-										<key>min-height</key>
-										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -3026,22 +1602,7 @@
 							</identifyingAttributes>
 							<attributes>
 								<attributes>
-									<entry>
-										<key>min-height</key>
-										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
+
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -3072,72 +1633,8 @@
 									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
 								</entry>
 								<entry>
-									<key>border-bottom-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>box-sizing</key>
-									<value xsi:type="xsd:string">border-box</value>
-								</entry>
-								<entry>
-									<key>display</key>
-									<value xsi:type="xsd:string">inline-block</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
-								</entry>
-								<entry>
-									<key>white-space</key>
-									<value xsi:type="xsd:string">pre</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -3158,22 +1655,6 @@
 							</identifyingAttributes>
 							<attributes>
 								<attributes>
-									<entry>
-										<key>min-height</key>
-										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -3194,22 +1675,6 @@
 							</identifyingAttributes>
 							<attributes>
 								<attributes>
-									<entry>
-										<key>min-height</key>
-										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -3230,22 +1695,6 @@
 							</identifyingAttributes>
 							<attributes>
 								<attributes>
-									<entry>
-										<key>min-height</key>
-										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -3266,22 +1715,6 @@
 							</identifyingAttributes>
 							<attributes>
 								<attributes>
-									<entry>
-										<key>min-height</key>
-										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -3312,72 +1745,8 @@
 									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
 								</entry>
 								<entry>
-									<key>border-bottom-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>box-sizing</key>
-									<value xsi:type="xsd:string">border-box</value>
-								</entry>
-								<entry>
-									<key>display</key>
-									<value xsi:type="xsd:string">inline-block</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
-								</entry>
-								<entry>
-									<key>white-space</key>
-									<value xsi:type="xsd:string">pre</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -3397,24 +1766,6 @@
 								</attributes>
 							</identifyingAttributes>
 							<attributes>
-								<attributes>
-									<entry>
-										<key>min-height</key>
-										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-								</attributes>
 							</attributes>
 						</containedComponents>
 						<containedComponents retestId="b63d41dc-6e33-46ba-bd5b-c93446b8b335">
@@ -3434,22 +1785,6 @@
 							</identifyingAttributes>
 							<attributes>
 								<attributes>
-									<entry>
-										<key>min-height</key>
-										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -3470,22 +1805,6 @@
 							</identifyingAttributes>
 							<attributes>
 								<attributes>
-									<entry>
-										<key>min-height</key>
-										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -3506,22 +1825,6 @@
 							</identifyingAttributes>
 							<attributes>
 								<attributes>
-									<entry>
-										<key>min-height</key>
-										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -3561,60 +1864,12 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
 								<entry>
 									<key>margin-bottom</key>
 									<value xsi:type="xsd:string">0px</value>
-								</entry>
-								<entry>
-									<key>padding-bottom</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>padding-top</key>
-									<value xsi:type="xsd:string">1px</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -3637,96 +1892,12 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(235, 235, 228)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>caret-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>column-rule-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
 								<entry>
 									<key>margin-bottom</key>
 									<value xsi:type="xsd:string">0px</value>
-								</entry>
-								<entry>
-									<key>outline-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>padding-bottom</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>padding-top</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>text-decoration-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -3749,60 +1920,12 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
 								<entry>
 									<key>margin-bottom</key>
 									<value xsi:type="xsd:string">0px</value>
-								</entry>
-								<entry>
-									<key>padding-bottom</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>padding-top</key>
-									<value xsi:type="xsd:string">1px</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -3824,86 +1947,6 @@
 						</identifyingAttributes>
 						<attributes>
 							<attributes>
-								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(235, 235, 228)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>box-sizing</key>
-									<value xsi:type="xsd:string">border-box</value>
-								</entry>
-								<entry>
-									<key>caret-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>column-rule-color</key>
-									<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-								</entry>
-								<entry>
-									<key>display</key>
-									<value xsi:type="xsd:string">inline-block</value>
-								</entry>
-								<entry>
-									<key>flex-direction</key>
-									<value xsi:type="xsd:string">column</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">monospace</value>
-								</entry>
 								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
@@ -3966,74 +2009,6 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>box-sizing</key>
-									<value xsi:type="xsd:string">border-box</value>
-								</entry>
-								<entry>
-									<key>display</key>
-									<value xsi:type="xsd:string">inline-block</value>
-								</entry>
-								<entry>
-									<key>flex-direction</key>
-									<value xsi:type="xsd:string">column</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">monospace</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
@@ -4085,74 +2060,6 @@
 						</identifyingAttributes>
 						<attributes>
 							<attributes>
-								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>box-sizing</key>
-									<value xsi:type="xsd:string">border-box</value>
-								</entry>
-								<entry>
-									<key>display</key>
-									<value xsi:type="xsd:string">inline-block</value>
-								</entry>
-								<entry>
-									<key>flex-direction</key>
-									<value xsi:type="xsd:string">column</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">monospace</value>
-								</entry>
 								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
@@ -4222,60 +2129,12 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
 								<entry>
 									<key>margin-bottom</key>
 									<value xsi:type="xsd:string">0px</value>
-								</entry>
-								<entry>
-									<key>padding-bottom</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>padding-top</key>
-									<value xsi:type="xsd:string">1px</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -4300,10 +2159,6 @@
 								<entry>
 									<key>align-items</key>
 									<value xsi:type="xsd:string">baseline</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
 								</entry>
 								<entry>
 									<key>font-size</key>
@@ -4333,66 +2188,6 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>align-items</key>
-									<value xsi:type="xsd:string">flex-start</value>
-								</entry>
-								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">outset</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">outset</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">outset</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">outset</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
@@ -4416,14 +2211,6 @@
 									<key>padding-top</key>
 									<value xsi:type="xsd:string">1px</value>
 								</entry>
-								<entry>
-									<key>text-align</key>
-									<value xsi:type="xsd:string">center</value>
-								</entry>
-								<entry>
-									<key>white-space</key>
-									<value xsi:type="xsd:string">pre</value>
-								</entry>
 							</attributes>
 						</attributes>
 					</containedComponents>
@@ -4446,80 +2233,12 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>align-items</key>
-									<value xsi:type="xsd:string">center</value>
-								</entry>
-								<entry>
 									<key>background-color</key>
 									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
 								</entry>
 								<entry>
-									<key>border-bottom-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(169, 169, 169)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">solid</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>box-sizing</key>
-									<value xsi:type="xsd:string">border-box</value>
-								</entry>
-								<entry>
-									<key>display</key>
-									<value xsi:type="xsd:string">inline-block</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
-								</entry>
-								<entry>
-									<key>white-space</key>
-									<value xsi:type="xsd:string">pre</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -4540,22 +2259,6 @@
 							</identifyingAttributes>
 							<attributes>
 								<attributes>
-									<entry>
-										<key>min-height</key>
-										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -4577,22 +2280,6 @@
 							</identifyingAttributes>
 							<attributes>
 								<attributes>
-									<entry>
-										<key>min-height</key>
-										<value xsi:type="xsd:string">16px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-left</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>padding-right</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
 								</attributes>
 							</attributes>
 						</containedComponents>
@@ -4648,60 +2335,12 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
 								<entry>
 									<key>margin-bottom</key>
 									<value xsi:type="xsd:string">0px</value>
-								</entry>
-								<entry>
-									<key>padding-bottom</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>padding-top</key>
-									<value xsi:type="xsd:string">1px</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -4724,60 +2363,12 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
 								<entry>
 									<key>margin-bottom</key>
 									<value xsi:type="xsd:string">0px</value>
-								</entry>
-								<entry>
-									<key>padding-bottom</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>padding-top</key>
-									<value xsi:type="xsd:string">1px</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -4800,60 +2391,12 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
 								<entry>
 									<key>margin-bottom</key>
 									<value xsi:type="xsd:string">0px</value>
-								</entry>
-								<entry>
-									<key>padding-bottom</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>padding-top</key>
-									<value xsi:type="xsd:string">1px</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -4876,60 +2419,12 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
 								<entry>
 									<key>margin-bottom</key>
 									<value xsi:type="xsd:string">0px</value>
-								</entry>
-								<entry>
-									<key>padding-bottom</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>padding-top</key>
-									<value xsi:type="xsd:string">1px</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -4952,60 +2447,12 @@
 						<attributes>
 							<attributes>
 								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">inset</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
-								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
 								</entry>
 								<entry>
 									<key>margin-bottom</key>
 									<value xsi:type="xsd:string">0px</value>
-								</entry>
-								<entry>
-									<key>padding-bottom</key>
-									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>padding-top</key>
-									<value xsi:type="xsd:string">1px</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -5060,56 +2507,8 @@
 							<attributes>
 								<attributes>
 									<entry>
-										<key>background-color</key>
-										<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-									</entry>
-									<entry>
-										<key>border-bottom-style</key>
-										<value xsi:type="xsd:string">inset</value>
-									</entry>
-									<entry>
-										<key>border-bottom-width</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>border-left-style</key>
-										<value xsi:type="xsd:string">inset</value>
-									</entry>
-									<entry>
-										<key>border-left-width</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>border-right-style</key>
-										<value xsi:type="xsd:string">inset</value>
-									</entry>
-									<entry>
-										<key>border-right-width</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>border-top-style</key>
-										<value xsi:type="xsd:string">inset</value>
-									</entry>
-									<entry>
-										<key>border-top-width</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>font-family</key>
-										<value xsi:type="xsd:string">Arial</value>
-									</entry>
-									<entry>
 										<key>font-size</key>
 										<value xsi:type="xsd:string">13.3333px</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-top</key>
-										<value xsi:type="xsd:string">1px</value>
 									</entry>
 								</attributes>
 							</attributes>
@@ -5131,66 +2530,6 @@
 						</identifyingAttributes>
 						<attributes>
 							<attributes>
-								<entry>
-									<key>align-items</key>
-									<value xsi:type="xsd:string">flex-start</value>
-								</entry>
-								<entry>
-									<key>background-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-bottom-style</key>
-									<value xsi:type="xsd:string">outset</value>
-								</entry>
-								<entry>
-									<key>border-bottom-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-left-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-left-style</key>
-									<value xsi:type="xsd:string">outset</value>
-								</entry>
-								<entry>
-									<key>border-left-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-right-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-right-style</key>
-									<value xsi:type="xsd:string">outset</value>
-								</entry>
-								<entry>
-									<key>border-right-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>border-top-color</key>
-									<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-								</entry>
-								<entry>
-									<key>border-top-style</key>
-									<value xsi:type="xsd:string">outset</value>
-								</entry>
-								<entry>
-									<key>border-top-width</key>
-									<value xsi:type="xsd:string">2px</value>
-								</entry>
-								<entry>
-									<key>font-family</key>
-									<value xsi:type="xsd:string">Arial</value>
-								</entry>
 								<entry>
 									<key>font-size</key>
 									<value xsi:type="xsd:string">13.3333px</value>
@@ -5214,14 +2553,6 @@
 								<entry>
 									<key>padding-top</key>
 									<value xsi:type="xsd:string">1px</value>
-								</entry>
-								<entry>
-									<key>text-align</key>
-									<value xsi:type="xsd:string">center</value>
-								</entry>
-								<entry>
-									<key>white-space</key>
-									<value xsi:type="xsd:string">pre</value>
 								</entry>
 							</attributes>
 						</attributes>
@@ -5275,74 +2606,6 @@
 							<attributes>
 								<attributes>
 									<entry>
-										<key>background-color</key>
-										<value xsi:type="xsd:string">rgb(235, 235, 228)</value>
-									</entry>
-									<entry>
-										<key>border-bottom-color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-									</entry>
-									<entry>
-										<key>border-bottom-style</key>
-										<value xsi:type="xsd:string">inset</value>
-									</entry>
-									<entry>
-										<key>border-bottom-width</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>border-left-color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-									</entry>
-									<entry>
-										<key>border-left-style</key>
-										<value xsi:type="xsd:string">inset</value>
-									</entry>
-									<entry>
-										<key>border-left-width</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>border-right-color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-									</entry>
-									<entry>
-										<key>border-right-style</key>
-										<value xsi:type="xsd:string">inset</value>
-									</entry>
-									<entry>
-										<key>border-right-width</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>border-top-color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-									</entry>
-									<entry>
-										<key>border-top-style</key>
-										<value xsi:type="xsd:string">inset</value>
-									</entry>
-									<entry>
-										<key>border-top-width</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>caret-color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-									</entry>
-									<entry>
-										<key>color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-									</entry>
-									<entry>
-										<key>column-rule-color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-									</entry>
-									<entry>
-										<key>font-family</key>
-										<value xsi:type="xsd:string">Arial</value>
-									</entry>
-									<entry>
 										<key>font-size</key>
 										<value xsi:type="xsd:string">13.3333px</value>
 									</entry>
@@ -5353,22 +2616,6 @@
 									<entry>
 										<key>margin-top</key>
 										<value xsi:type="xsd:string">0px</value>
-									</entry>
-									<entry>
-										<key>outline-color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-top</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>text-decoration-color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
 									</entry>
 								</attributes>
 							</attributes>
@@ -5391,74 +2638,6 @@
 							<attributes>
 								<attributes>
 									<entry>
-										<key>background-color</key>
-										<value xsi:type="xsd:string">rgb(235, 235, 228)</value>
-									</entry>
-									<entry>
-										<key>border-bottom-color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-									</entry>
-									<entry>
-										<key>border-bottom-style</key>
-										<value xsi:type="xsd:string">inset</value>
-									</entry>
-									<entry>
-										<key>border-bottom-width</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>border-left-color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-									</entry>
-									<entry>
-										<key>border-left-style</key>
-										<value xsi:type="xsd:string">inset</value>
-									</entry>
-									<entry>
-										<key>border-left-width</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>border-right-color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-									</entry>
-									<entry>
-										<key>border-right-style</key>
-										<value xsi:type="xsd:string">inset</value>
-									</entry>
-									<entry>
-										<key>border-right-width</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>border-top-color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-									</entry>
-									<entry>
-										<key>border-top-style</key>
-										<value xsi:type="xsd:string">inset</value>
-									</entry>
-									<entry>
-										<key>border-top-width</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>caret-color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-									</entry>
-									<entry>
-										<key>color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-									</entry>
-									<entry>
-										<key>column-rule-color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-									</entry>
-									<entry>
-										<key>font-family</key>
-										<value xsi:type="xsd:string">Arial</value>
-									</entry>
-									<entry>
 										<key>font-size</key>
 										<value xsi:type="xsd:string">13.3333px</value>
 									</entry>
@@ -5469,22 +2648,6 @@
 									<entry>
 										<key>margin-top</key>
 										<value xsi:type="xsd:string">0px</value>
-									</entry>
-									<entry>
-										<key>outline-color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
-									</entry>
-									<entry>
-										<key>padding-bottom</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>padding-top</key>
-										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>text-decoration-color</key>
-										<value xsi:type="xsd:string">rgb(84, 84, 84)</value>
 									</entry>
 								</attributes>
 							</attributes>
@@ -5507,76 +2670,8 @@
 							<attributes>
 								<attributes>
 									<entry>
-										<key>align-items</key>
-										<value xsi:type="xsd:string">flex-start</value>
-									</entry>
-									<entry>
-										<key>background-color</key>
-										<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-									</entry>
-									<entry>
-										<key>border-bottom-color</key>
-										<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-									</entry>
-									<entry>
-										<key>border-bottom-style</key>
-										<value xsi:type="xsd:string">outset</value>
-									</entry>
-									<entry>
-										<key>border-bottom-width</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>border-left-color</key>
-										<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-									</entry>
-									<entry>
-										<key>border-left-style</key>
-										<value xsi:type="xsd:string">outset</value>
-									</entry>
-									<entry>
-										<key>border-left-width</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>border-right-color</key>
-										<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-									</entry>
-									<entry>
-										<key>border-right-style</key>
-										<value xsi:type="xsd:string">outset</value>
-									</entry>
-									<entry>
-										<key>border-right-width</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>border-top-color</key>
-										<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-									</entry>
-									<entry>
-										<key>border-top-style</key>
-										<value xsi:type="xsd:string">outset</value>
-									</entry>
-									<entry>
-										<key>border-top-width</key>
-										<value xsi:type="xsd:string">2px</value>
-									</entry>
-									<entry>
-										<key>caret-color</key>
-										<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
-									</entry>
-									<entry>
 										<key>color</key>
 										<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
-									</entry>
-									<entry>
-										<key>column-rule-color</key>
-										<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
-									</entry>
-									<entry>
-										<key>font-family</key>
-										<value xsi:type="xsd:string">Arial</value>
 									</entry>
 									<entry>
 										<key>font-size</key>
@@ -5589,10 +2684,6 @@
 									<entry>
 										<key>margin-top</key>
 										<value xsi:type="xsd:string">0px</value>
-									</entry>
-									<entry>
-										<key>outline-color</key>
-										<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
 									</entry>
 									<entry>
 										<key>padding-bottom</key>
@@ -5609,18 +2700,6 @@
 									<entry>
 										<key>padding-top</key>
 										<value xsi:type="xsd:string">1px</value>
-									</entry>
-									<entry>
-										<key>text-align</key>
-										<value xsi:type="xsd:string">center</value>
-									</entry>
-									<entry>
-										<key>text-decoration-color</key>
-										<value xsi:type="xsd:string">rgb(128, 128, 128)</value>
-									</entry>
-									<entry>
-										<key>white-space</key>
-										<value xsi:type="xsd:string">pre</value>
 									</entry>
 								</attributes>
 							</attributes>
@@ -5675,10 +2754,6 @@
 							<attributes>
 								<attributes>
 									<entry>
-										<key>font-family</key>
-										<value xsi:type="xsd:string">Arial</value>
-									</entry>
-									<entry>
 										<key>font-size</key>
 										<value xsi:type="xsd:string">13.3333px</value>
 									</entry>
@@ -5689,10 +2764,6 @@
 									<entry>
 										<key>margin-right</key>
 										<value xsi:type="xsd:string">3px</value>
-									</entry>
-									<entry>
-										<key>min-height</key>
-										<value xsi:type="xsd:string">13px</value>
 									</entry>
 									<entry>
 										<key>min-width</key>
@@ -5739,66 +2810,6 @@
 					<attributes>
 						<attributes>
 							<entry>
-								<key>align-items</key>
-								<value xsi:type="xsd:string">flex-start</value>
-							</entry>
-							<entry>
-								<key>background-color</key>
-								<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-							</entry>
-							<entry>
-								<key>border-bottom-color</key>
-								<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-							</entry>
-							<entry>
-								<key>border-bottom-style</key>
-								<value xsi:type="xsd:string">outset</value>
-							</entry>
-							<entry>
-								<key>border-bottom-width</key>
-								<value xsi:type="xsd:string">2px</value>
-							</entry>
-							<entry>
-								<key>border-left-color</key>
-								<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-							</entry>
-							<entry>
-								<key>border-left-style</key>
-								<value xsi:type="xsd:string">outset</value>
-							</entry>
-							<entry>
-								<key>border-left-width</key>
-								<value xsi:type="xsd:string">2px</value>
-							</entry>
-							<entry>
-								<key>border-right-color</key>
-								<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-							</entry>
-							<entry>
-								<key>border-right-style</key>
-								<value xsi:type="xsd:string">outset</value>
-							</entry>
-							<entry>
-								<key>border-right-width</key>
-								<value xsi:type="xsd:string">2px</value>
-							</entry>
-							<entry>
-								<key>border-top-color</key>
-								<value xsi:type="xsd:string">rgb(221, 221, 221)</value>
-							</entry>
-							<entry>
-								<key>border-top-style</key>
-								<value xsi:type="xsd:string">outset</value>
-							</entry>
-							<entry>
-								<key>border-top-width</key>
-								<value xsi:type="xsd:string">2px</value>
-							</entry>
-							<entry>
-								<key>font-family</key>
-								<value xsi:type="xsd:string">Arial</value>
-							</entry>
-							<entry>
 								<key>font-size</key>
 								<value xsi:type="xsd:string">13.3333px</value>
 							</entry>
@@ -5826,14 +2837,6 @@
 								<key>padding-top</key>
 								<value xsi:type="xsd:string">1px</value>
 							</entry>
-							<entry>
-								<key>text-align</key>
-								<value xsi:type="xsd:string">center</value>
-							</entry>
-							<entry>
-								<key>white-space</key>
-								<value xsi:type="xsd:string">pre</value>
-							</entry>
 						</attributes>
 					</attributes>
 				</containedComponents>
@@ -5857,46 +2860,6 @@
 					<attributes>
 						<attributes>
 							<entry>
-								<key>background-color</key>
-								<value xsi:type="xsd:string">rgb(255, 255, 255)</value>
-							</entry>
-							<entry>
-								<key>border-bottom-style</key>
-								<value xsi:type="xsd:string">inset</value>
-							</entry>
-							<entry>
-								<key>border-bottom-width</key>
-								<value xsi:type="xsd:string">2px</value>
-							</entry>
-							<entry>
-								<key>border-left-style</key>
-								<value xsi:type="xsd:string">inset</value>
-							</entry>
-							<entry>
-								<key>border-left-width</key>
-								<value xsi:type="xsd:string">2px</value>
-							</entry>
-							<entry>
-								<key>border-right-style</key>
-								<value xsi:type="xsd:string">inset</value>
-							</entry>
-							<entry>
-								<key>border-right-width</key>
-								<value xsi:type="xsd:string">2px</value>
-							</entry>
-							<entry>
-								<key>border-top-style</key>
-								<value xsi:type="xsd:string">inset</value>
-							</entry>
-							<entry>
-								<key>border-top-width</key>
-								<value xsi:type="xsd:string">2px</value>
-							</entry>
-							<entry>
-								<key>font-family</key>
-								<value xsi:type="xsd:string">Arial</value>
-							</entry>
-							<entry>
 								<key>font-size</key>
 								<value xsi:type="xsd:string">13.3333px</value>
 							</entry>
@@ -5907,14 +2870,6 @@
 							<entry>
 								<key>margin-top</key>
 								<value xsi:type="xsd:string">0px</value>
-							</entry>
-							<entry>
-								<key>padding-bottom</key>
-								<value xsi:type="xsd:string">1px</value>
-							</entry>
-							<entry>
-								<key>padding-top</key>
-								<value xsi:type="xsd:string">1px</value>
 							</entry>
 						</attributes>
 					</attributes>
