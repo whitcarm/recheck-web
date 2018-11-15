@@ -21,6 +21,7 @@ attributes:
   - background-position
   - background-repeat
   - background-size
+  - border-color
   - border-bottom-style
   - border-bottom-color
   - border-bottom-left-radius

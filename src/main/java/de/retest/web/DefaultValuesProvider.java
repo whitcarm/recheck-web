@@ -84,9 +84,13 @@ public class DefaultValuesProvider implements DefaultValueFinder {
 		return getDefaultValue( comp.getType(), attributesKey );
 	}
 
-	public boolean isDefault( final String tag, final String attribute, final String attributeValue ) {
-		final String defaultValue = getDefaultValue( tag, attribute );
-		if ( defaultValue != null ) {
+	public boolean isDefault( final WebData webData, final String attribute ) {
+		final String attributeValue = webData.getAsString( attribute );
+		String defaultValue = getDefaultValue( webData.getTag(), attribute );
+		if ( defaultValue != null && defaultValue.startsWith( "${" ) ) {
+			defaultValue = webData.getAsString( resolveReferenceToAttribute( defaultValue ) );
+		}
+		if ( defaultValue != null && !defaultValue.isEmpty() ) {
 			return defaultValue.equalsIgnoreCase( attributeValue );
 		}
 		if ( attributeValue == null || attributeValue.trim().isEmpty() ) {
@@ -96,6 +100,10 @@ public class DefaultValuesProvider implements DefaultValueFinder {
 			return true;
 		}
 		return false;
+	}
+
+	protected static String resolveReferenceToAttribute( final String defaultValue ) {
+		return defaultValue.substring( 2, defaultValue.length() - 1 );
 	}
 
 }

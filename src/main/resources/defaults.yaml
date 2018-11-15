@@ -14,6 +14,10 @@ all:
   - border-collapse: separate
   - border-image-repeat: stretch
   - border-image-slice: 100%
+  - border-bottom-color: ${border-color}
+  - border-left-color: ${border-color}
+  - border-right-color: ${border-color}
+  - border-top-color: ${border-color}
   - box-decoration-break: slice
   - box-sizing: content-box
   - caption-side: top
@@ -55,19 +59,15 @@ all:
   - visibility: visible
 
 a:
+  - caret-color: ${text-decoration-color}
+  - column-rule-color: ${text-decoration-color}
+  - border-color: ${color}
   - border-image-width: 1
-  - border-color: rgb(0, 0, 238)
-  - border-bottom-color: rgb(0, 0, 238)
-  - border-left-color: rgb(0, 0, 238)
-  - border-right-color: rgb(0, 0, 238)
-  - border-top-color: rgb(0, 0, 238)
-  - caret-color: rgb(0, 0, 238)
-  - column-rule-color: rgb(0, 0, 238)
-  - outline-color: rgb(0, 0, 238)
-  - text-decoration-color: rgb(0, 0, 238)
   - color: rgb(0, 0, 238)
   - display: inline
+  - outline-color: ${text-decoration-color}
   - text-decoration: underline
+  - text-decoration-color: ${color}
   - text-decoration-line: underline
 
 address:
@@ -85,17 +85,22 @@ bdo:
   - unicode-bidi: bidi-override
 
 blockquote:
-  - margin-bottom: 1em
+  - margin-bottom: ${font-size}
   - margin-left: 40px
   - margin-right: 40px
-  - margin-top: 1em
+  - margin-top: ${font-size}
 
 body:
+  - caret-color: ${text-decoration-color}
+  - column-rule-color: ${text-decoration-color}
+  - border-color: ${color} 
   - border-image-width: 1
   - margin-bottom: 8px
   - margin-left: 8px
   - margin-right: 8px
   - margin-top: 8px
+  - outline-color: ${text-decoration-color}
+  - text-decoration-color: ${color}
 
 br:
   - border-image-width: 1
@@ -133,10 +138,10 @@ div:
   - border-image-width: 1
 
 dl:
-  - margin-bottom: 1em
+  - margin-bottom: ${font-size}
   - margin-left: 0px
   - margin-right: 0px
-  - margin-top: 1em
+  - margin-top: ${font-size}
 
 em:
   - border-image-width: 1
@@ -153,10 +158,10 @@ fieldset:
   - padding-top: 0.35em
 
 figure:
-  - margin-bottom: 1em
+  - margin-bottom: ${font-size}
   - margin-left: 40px
   - margin-right: 40px
-  - margin-top: 1em
+  - margin-top: ${font-size}
 
 form:
   - border-image-width: 1
@@ -178,8 +183,8 @@ h2:
 h3:
   - font-size: 1.17em
   - font-weight: bold
-  - margin-bottom: 1em
-  - margin-top: 1em
+  - margin-bottom: ${font-size}
+  - margin-top: ${font-size}
 
 h4:
   - font-weight: bold
@@ -217,11 +222,34 @@ i:
   - font-style: italic
 
 input:
+  - align-items: flex-start
+  - background-color: rgb(255, 255, 255)
+  - border-bottom-style: inset
+  - border-bottom-width: 2px
+  - border-left-style: inset
+  - border-left-width: 2px
+  - border-right-style: inset
+  - border-right-width: 2px
+  - border-top-style: inset
+  - border-top-width: 2px
   - border-image-width: 1
   - box-sizing: border-box
+  - caret-color: ${text-decoration-color}
+  - color: rgb(84, 84, 84)
+  - column-rule-color: ${text-decoration-color}
   - display: inline-block
+  - font-family: Arial
   - margin-bottom: 3px
   - margin-top: 3px
+  - min-height: 13px
+  - padding-bottom: 1px
+  - padding-top: 1px
+  - padding-left: 1px
+  - padding-right: 1px
+  - outline-color: ${text-decoration-color}
+  - text-decoration-color: ${color}
+  - text-align: center
+  - white-space: pre
 
 img:
   - border-image-width: 1
@@ -257,23 +285,38 @@ mark:
 
 menu:
   - list-style-type: disc
-  - margin-bottom: 1em
-  - margin-top: 1em
+  - margin-bottom: ${font-size}
+  - margin-top: ${font-size}
   - padding-left: 40px
 
 ol:
   - list-style-type: decimal
-  - margin-bottom: 1em
-  - margin-top: 1em
+  - margin-bottom: ${font-size}
+  - margin-top: ${font-size}
   - padding-left: 40px
 
 output:
   - display: inline
+  
+option:
+  - caret-color: ${text-decoration-color}
+  - column-rule-color: ${text-decoration-color}
+  - min-height: 16px
+  - padding-bottom: 1px
+  - padding-left: 2px
+  - padding-right: 2px
+  - outline-color: ${text-decoration-color}
+  - text-decoration-color: ${color}
+  - white-space: pre
 
 p:
+  - caret-color: ${text-decoration-color}
+  - column-rule-color: ${text-decoration-color}
   - border-image-width: 1
   - margin-bottom: 16px
   - margin-top: 16px
+  - outline-color: ${text-decoration-color}
+  - text-decoration-color: ${color}
 
 param:
   - display: none
@@ -307,6 +350,30 @@ samp:
 script:
   - border-image-width: 1
   - display: none
+  
+select:
+  - align-items: flex-start
+  - background-color: rgb(248, 248, 248)
+  - border-bottom-style: solid
+  - border-bottom-width: 1px
+  - border-left-style: solid
+  - border-left-width: 1px
+  - border-right-style: solid
+  - border-right-width: 1px
+  - border-top-style: solid
+  - border-top-width: 1px
+  - box-sizing: border-box
+  - caret-color: ${text-decoration-color}
+  - column-rule-color: ${text-decoration-color}
+  - color: rgb(128, 128, 128)
+  - display: inline-block
+  - font-family: Arial
+  - outline-color: ${text-decoration-color}
+  - overflow-x: hidden
+  - overflow-y: scroll
+  - text-decoration-color: ${color}
+  - vertical-align: text-bottom
+  - white-space: pre
 
 small:
   - font-size: smaller
@@ -334,23 +401,47 @@ sup:
 
 table:
   - border-collapse: separate
-  - border-bottom-color: rgb(128, 128, 128)
-  - border-left-color: rgb(128, 128, 128)
-  - border-right-color: rgb(128, 128, 128)
-  - border-top-color: rgb(128, 128, 128)
+  - border-color: rgb(128, 128, 128)
   - border-image-width: 1
   - border-spacing: 2px 2px
   - display: table
 
 tbody:
-  - border-bottom-color: rgb(128, 128, 128)
-  - border-left-color: rgb(128, 128, 128)
-  - border-right-color: rgb(128, 128, 128)
-  - border-top-color: rgb(128, 128, 128)
+  - border-color: rgb(128, 128, 128)
   - border-image-width: 1
   - border-spacing: 2px 2px
   - display: table-row-group
   - vertical-align: middle
+
+textarea:
+  - background-color: rgb(255, 255, 255)
+  - border-bottom-style: solid
+  - border-bottom-width: 1px
+  - border-left-style: solid
+  - border-left-width: 1px
+  - border-right-style: solid
+  - border-right-width: 1px
+  - border-top-style: solid
+  - border-top-width: 1px
+  - box-sizing: border-box
+  - caret-color: ${text-decoration-color}
+  - color: rgb(84, 84, 84)
+  - column-rule-color: ${text-decoration-color}
+  - display: inline-block
+  - flex-direction: column
+  - font-family: monospace
+  - margin-bottom: 0px
+  - overflow-x: auto
+  - overflow-y: auto
+  - outline-color: ${text-decoration-color}
+  - padding-bottom: 2px
+  - padding-left: 2px
+  - padding-right: 2px
+  - padding-top: 2px
+  - resize: both
+  - text-decoration-color: ${color}
+  - white-space: pre-wrap
+  - word-wrap: break-word
 
 td:
   - border-image-width: 1
@@ -377,10 +468,7 @@ title:
   - display: none
 
 tr:
-  - border-bottom-color: rgb(128, 128, 128)
-  - border-left-color: rgb(128, 128, 128)
-  - border-right-color: rgb(128, 128, 128)
-  - border-top-color: rgb(128, 128, 128)
+  - border-color: rgb(128, 128, 128)
   - border-image-width: 1
   - border-spacing: 2px 2px
   - display: table-row
@@ -391,8 +479,8 @@ u:
 
 ul:
   - list-style-type: disc
-  - margin-bottom: 1em
-  - margin-top: 1em
+  - margin-bottom: ${font-size}
+  - margin-top: ${font-size}
   - padding-left: 40px
 
 var:
