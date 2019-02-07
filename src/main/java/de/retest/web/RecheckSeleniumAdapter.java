@@ -1,13 +1,10 @@
 package de.retest.web;
 
-import static de.retest.web.ScreenshotProvider.shootFullPage;
-
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UncheckedIOException;
 import java.nio.charset.StandardCharsets;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -51,17 +48,18 @@ public class RecheckSeleniumAdapter implements RecheckAdapter {
 		logger.info( "Retrieving attributes for each element." );
 		final List<String> cssAttributes = AttributesProvider.getInstance().getCssAttributes();
 		final JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-		@SuppressWarnings( "unchecked" )
-		final Map<String, Map<String, Object>> result =
-				(Map<String, Map<String, Object>>) jsExecutor.executeScript( getQueryJS(), cssAttributes );
 
-		logger.info( "Checking website {} with {} elements.", driver.getCurrentUrl(), result.size() );
-		final RootElement lastChecked = convertToPeers( result, driver.getTitle(), shootFullPage( driver ) );
-		if ( driver instanceof RecheckDriver ) {
-			((RecheckDriver) driver).setLastActualState( lastChecked );
-		}
+		final String result = jsExecutor.executeScript( getQueryJS(), attributes ).toString();
 
-		return Collections.singleton( lastChecked );
+		logger.info( "Checking website {}.", driver.getCurrentUrl() );
+
+		//		final RootElement lastChecked = convertToPeers( result, driver.getTitle(), shootFullPage( driver ) );
+		//		if ( driver instanceof RecheckDriver ) {
+		//			((RecheckDriver) driver).setLastActualState( lastChecked );
+		//		}
+
+		return null;
+
 	}
 
 	public String getQueryJS() {
