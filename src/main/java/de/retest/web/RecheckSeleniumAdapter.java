@@ -15,12 +15,14 @@ import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import de.retest.recheck.GoldenMaster;
 import de.retest.recheck.RecheckAdapter;
 import de.retest.recheck.ui.DefaultValueFinder;
 import de.retest.recheck.ui.descriptors.RetestIdProviderUtil;
 import de.retest.recheck.ui.descriptors.RootElement;
 import de.retest.recheck.ui.descriptors.idproviders.RetestIdProvider;
-import de.retest.web.selenium.RecheckDriver;
 
 public class RecheckSeleniumAdapter implements RecheckAdapter {
 
@@ -49,7 +51,16 @@ public class RecheckSeleniumAdapter implements RecheckAdapter {
 		final List<String> cssAttributes = AttributesProvider.getInstance().getCssAttributes();
 		final JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 
-		final String result = jsExecutor.executeScript( getQueryJS(), attributes ).toString();
+		final String result = jsExecutor.executeScript( getQueryJS(), cssAttributes ).toString();
+
+		final ObjectMapper mapper = new ObjectMapper();
+
+		try {
+			final GoldenMaster goldenMaster = mapper.readValue( result, GoldenMaster.class );
+			logger.info( "Golden master: {}", goldenMaster );
+		} catch ( final IOException e ) {
+			logger.error( "Error reading json.", e );
+		}
 
 		logger.info( "Checking website {}.", driver.getCurrentUrl() );
 
