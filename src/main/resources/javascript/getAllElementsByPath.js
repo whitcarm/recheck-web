@@ -46,6 +46,13 @@ var getPath = function(node) {
 	return segs.length ? '/' + segs.join('/') : null;
 }
 
+var getAttribues = function(node) {
+	return {
+		"css": getStyle(node),
+		"html": getHtml(node)
+	}
+}
+
 var getSubTree = function(node) {
 	if (node.hasChildNodes()) {
 		var children = [];
@@ -60,11 +67,8 @@ var getSubTree = function(node) {
 			"id": node.nodeName.toLowerCase,
 			"path": getPath(node),
 			"shown" : isShown(node),
-			"attributes": {
-				"css": getStyle(node),
-				"html": getHtml(node)
-			},
-			children: children,
+			"attributes": getAttribues(node),
+			"children": children,
         }
     }
 }
