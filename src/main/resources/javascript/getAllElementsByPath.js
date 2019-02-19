@@ -73,6 +73,19 @@ var getSubTree = function(node) {
     }
 }
 
-var nodeTree = getSubTree(document.documentElement)
+var elements = getSubTree(document.documentElement)
 
-return JSON.stringify(nodeTree)
+var goldenMaster = {
+	"metadata": {
+        "test": "blabla",
+        "version": "blub",
+        "title": "retest - Java Swing GUI Testing"
+    },
+    "screenshot": {
+        "key": "abc",
+        "value": "window_536f7029395cc378441595d44d8b8bb8fc2cfa9c1dd08167ac492654753c6ca4"
+    },
+    "elements": [elements]
+}
+
+return JSON.stringify(goldenMaster)
