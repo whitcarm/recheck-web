@@ -4,28 +4,16 @@ function isShown(node) {
 	return !(node.offsetParent === null)
 }
 
-var result = [];
-
-var f = function(elm) {
-	for (var segs = []; elm && elm.nodeType == 1; elm = elm.parentNode)  {
-		for (i = 1, sib = elm.previousSibling; sib; sib = sib.previousSibling) { 
-			if (sib.localName == elm.localName) {
-				i++;
-			}   
-		}; 
-		segs.unshift(elm.localName.toLowerCase() + '[' + i + ']');
-	}
-	return segs.length ? '/' + segs.join('/') : null;
-}
-
 var getStyle = function(node) {
 	var result = {}
-	// var args = ["align-content", "animation-delay"]
+	var cssAttributes = ["align-content", "animation-delay"]
 	var style = window.getComputedStyle(node)  || [];
 
-	args.forEach(function(e) {
+	cssAttributes.forEach(function(e) {
 		result[e] = style[e]
 	})
+
+	result.text = getText(node)
 
 	return result
 }
@@ -37,14 +25,50 @@ function getText(node) {
 	return "";
 }
 
-document.querySelectorAll('*').forEach(function(node) {
-	result.push({
-		"path" : f(node),
-		"style" : getStyle(node),
-		"tagName" : node.tagName,
-		"text" : getText(node),
-		"shown" : isShown(node)
-	})
-});
+var getHtml = function(node) {
+	return {
+		"absolute-outline": {
+			"x": "TEST-X",
+			"y": "TEST-Y"
+		}
+	}
+}
 
-return JSON.stringify(result)
+var getPath = function(node) {
+	for (var segs = []; node && node.nodeType == 1; node = node.parentNode)  {
+		for (i = 1, sib = node.previousSibling; sib; sib = sib.previousSibling) { 
+			if (sib.localName == node.localName) {
+				i++;
+			}   
+		}; 
+		segs.unshift(node.localName.toLowerCase() + '[' + i + ']');
+	}
+	return segs.length ? '/' + segs.join('/') : null;
+}
+
+var getSubTree = function(node) {
+	if (node.hasChildNodes()) {
+		var children = [];
+        for (var i = 0; i < node.childNodes.length; i++) {
+			var current = getSubTree(node.childNodes[i])
+			if (current != null) {
+				children.push(current);
+			}
+        }
+		
+        return {
+			"id": node.nodeName.toLowerCase,
+			"path": getPath(node),
+			"shown" : isShown(node),
+			"attributes": {
+				"css": getStyle(node),
+				"html": getHtml(node)
+			},
+			children: children,
+        }
+    }
+}
+
+var nodeTree = getSubTree(document.documentElement)
+
+return JSON.stringify(nodeTree)
