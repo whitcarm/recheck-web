@@ -10,7 +10,7 @@ import de.retest.recheck.RecheckImpl;
 import de.retest.web.testutils.WebDriverFactory;
 import de.retest.web.testutils.WebDriverFactory.Driver;
 
-public class WikipediaIT {
+public class WikipediaMainIT {
 
 	private WebDriver driver;
 	private Recheck re;
@@ -25,7 +25,7 @@ public class WikipediaIT {
 	public void index() throws Exception {
 		re.startTest( "wikipedia" );
 
-		driver.get( "https://en.wikipedia.org/wiki/Java" );
+		driver.get( "https://en.wikipedia.org/wiki/Main_Page" );
 
 		re.check( driver, "index" );
 
